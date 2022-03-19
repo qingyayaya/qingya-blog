@@ -1,0 +1,38 @@
+# qingya Configuration
+
+# Site
+name: 青崖同学
+author: 青崖同学
+language: en
+timezone: ''
+icon: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/img/avatar.png
+logo: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/img/og_image.svg
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: https://qingyaya.gitee.io
+
+# Directory
+source_dir: source
+public_dir: public
+skip_render: 404/index.html # 不渲染404页面
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## qingya uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Deployment
+deploy:
+  type: git
+  repository: https://gitee.com/qingyaya/qingyaya.git
+  branch: master
+
+# 是否对生成的html,js,css进行压缩
+minifier: false

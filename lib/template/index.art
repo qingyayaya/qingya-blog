@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="{{ config.language }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>{{ config.name }}</title>
+    <link rel="icon" href="{{ config.icon }}">
+    <link rel="stylesheet" href="/css/main.css">
+    <style type="text/css">
+        /* 导航栏 */
+        nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background-color: rgba(255,255,255,0.85);
+            border-color: #e7e7e7;
+            border-style: solid;
+            border-width: 0 0 1px;
+            padding: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: none;
+        }
+        .navbar-left {
+            float: left !important;
+            align-items: stretch;
+            display: flex;
+        }
+        .navbar-left a {
+            display: flex;
+            align-items: center;
+            padding: 0.46rem;
+        }
+        .navbar-logo {
+            height: 2.5rem;
+            max-height: 2.5rem;
+        }
+        .navbar-right {
+            float: right !important;
+            align-items: stretch;
+            display: flex;
+            padding: 0;
+            flex-shrink: 0;
+        }
+        .navbar-right a {
+            display: flex;
+            align-items: center;
+            padding: 1.05rem 0.75rem;
+            margin: 0 0;
+            color: #4a4a4a;
+        }
+        .navbar-right a:hover {
+            background: #428bca;
+            color: #fff;
+        }
+
+        /* achieve */
+        .achieve {
+            margin: 70px 10px 20px 10px;
+            padding-left: 0;
+        }
+        .achieve-item {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            margin-bottom: -1px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            line-height: 1;
+        }
+        .achieve-item:hover {
+            background-color: #eee;
+        }
+        .achieve-item:first-child {
+            border-top-right-radius: 4px;
+            border-top-left-radius: 4px;
+        }
+        .achieve-item:last-child {
+            margin-bottom: 0;
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+        .achieve-item .info {
+            padding: 15px 20px;
+        }
+        .achieve-item .cover {
+            font-size: 0;
+            border-left: 1px solid #ddd;
+        }
+        .achieve-item .info .date {
+            font-size: 80%;
+            color: darkgray;
+            margin-bottom: 0.7rem;
+        }
+        .achieve-item .info a {
+            display: block;
+        }
+        .achieve-item .cover img {
+            height: 70px;
+        }
+
+        /* 底部的 less is more */
+        .less-is-more {
+            text-align: center;
+            font-size: 80%;
+            letter-spacing: 0.1rem;
+            color: lightgrey;
+            position: relative;
+            margin: 20px 0 30px 0;
+        }
+        .less-is-more::before, .less-is-more::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            width: 60px;
+            height: 0.4px;
+            left: 50%;
+            background-color: lightgrey;
+        }
+        .less-is-more::before {
+            margin-left: -120px;
+        }
+        .less-is-more::after {
+            margin-left: 60px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar-left">
+            <a href="/" target="_blank"><img class="navbar-logo" src="{{ config.logo }}" alt="{{ config.name }}"></a>
+        </div>
+        <div class="navbar-right">
+            {{each pages}}
+            <a href="/{{ $value.title }}" target="_blank">{{ $value.text }}</a>
+            {{/each}}
+        </div>
+    </nav>
+    <ul class="achieve">
+        {{each posts}}
+        <li class="achieve-item">
+            <div class="info">
+                <div class="date">{{ $value.date }}</div>
+                <a href="/post/{{ $value.title }}" target="_blank">{{ $value.title }}</a>
+            </div>
+            <div class="cover">
+                <img src="{{ $value.cover }}"/>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+    <div class="less-is-more">Less is More<div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ config.language }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>{{ title }}</title>
+    <link rel="icon" href="{{ config.icon }}">
+    <link rel="stylesheet" href="/css/main.css">
+    {{if hasCode}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.3.1/styles/github.css">
+    <link rel="stylesheet" href="https://fonts.loli.net/css2?family=Source+Code+Pro">
+    {{/if}}
+</head>
+<body>
+    <article>
+        {{if (type == 'post')}}
+        <p class="title">{{ title }}</p>
+        <p class="date">{{ date }}</p>
+        {{/if}}
+        <div class="content">
+            {{@ content}}
+        </div>
+    </article>
+</body>
+</html>
