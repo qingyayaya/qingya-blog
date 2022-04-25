@@ -1,5 +1,5 @@
 ---
-title: 《The Witness》之解谜篇
+title: 【游戏安利】The Witness 之解谜篇
 date: 2022-01-23 19:00:00
 cover: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover15.png
 ---
@@ -266,13 +266,13 @@ Lowpoly 的树干，一些 Blender 的教程会从撸一颗 Lowpoly 树木开始
 
 用来控制反射面的转动。
 
-src="指针.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/指针.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 ### 小船
 
 小船通道极富设计感，用最极简的设计传达了最明确的意义。
 
-src="小船.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/小船.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 ### 航线规划和船速档位
 
@@ -364,7 +364,7 @@ src="小船.mp4" width="400" controls autoplay loop muted>your browser does not 
 
 演示如下：
 
-src="倒Y形2.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/倒Y形2.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 ## 三角形
 
@@ -386,7 +386,7 @@ src="倒Y形2.mp4" width="400" controls autoplay loop muted>your browser does no
 
 圆柱环绕实现了面板左右两端的连通。
 
-src="圆柱环绕.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/圆柱环绕.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 不怕大家笑话，这道题我冥思苦想了 4 个小时，没有想出来。
 
@@ -398,7 +398,7 @@ src="圆柱环绕.mp4" width="400" controls autoplay loop muted>your browser doe
 
 ### 中心对称
 
-src="中心对称1.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/中心对称1.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 一些中心对称的谜题。注意蓝色路径和黄色路径的亮度是相同的：
 
@@ -418,7 +418,7 @@ src="中心对称1.mp4" width="400" controls autoplay loop muted>your browser do
 
 ### 颜色闪烁
 
-src="颜色闪烁.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/颜色闪烁.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 ### 图案遮罩
 
@@ -426,7 +426,7 @@ src="颜色闪烁.mp4" width="400" controls autoplay loop muted>your browser doe
 
 ### 遮罩闪烁
 
-src="遮罩闪烁.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/遮罩闪烁.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 ## 面板偏移
 
@@ -442,17 +442,17 @@ src="遮罩闪烁.mp4" width="400" controls autoplay loop muted>your browser doe
 
 ### 线运动
 
-src="线运动1.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/线运动1.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 会随着鼠标的移动改变背景的移动速度：
 
-src="线运动2.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/线运动2.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 ### 角运动
 
 会随着鼠标的移动改变背景的转动速度。这个谜题本身不难，但从操作性方面来说是全游戏最难的：
 
-src="角运动.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/角运动.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 ## 面板同步
 
@@ -460,7 +460,7 @@ src="角运动.mp4" width="400" controls autoplay loop muted>your browser does n
 
 指 6 个面板具有一致的动作。
 
-src="关联同步.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/关联同步.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 ### 隔岸同步
 
@@ -488,7 +488,7 @@ src="关联同步.mp4" width="400" controls autoplay loop muted>your browser doe
 
 不同于面板谜题，环境谜题“不可见”，隐匿在环境中，需要从环境中寻找。第一个环境谜题其实就隐藏在你的出生地，走出管道转头就能看见。
 
-src="第一个环境谜题.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/第一个环境谜题.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 我第一次意识到存在环境谜题，是在所站的位置抬头猛然看见白云排列成波浪线：
 
@@ -502,13 +502,13 @@ src="第一个环境谜题.mp4" width="400" controls autoplay loop muted>your br
 
 ### 远视
 
-src="远视.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/远视.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 ### 俯仰
 
 当你以为在沙漠的地下解完了所有谜题，乘坐电梯回到地表，兴冲冲地开启那道激光，伴随着齿轮的转动声，你可曾意识到电梯井里还藏着天大的秘密。然而若不是重访地下，谁又能发现呢？
 
-src="仰视.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/仰视.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 ### 视觉错位
 
@@ -518,7 +518,7 @@ src="仰视.mp4" width="400" controls autoplay loop muted>your browser does not 
 
 这就叫视觉错位：
 
-src="视觉错位2.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/视觉错位2.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 我记得我第一次听说视觉错位，是看到有人在现实中摆放一些乱七八糟的物体，只有从特殊的角度观察才能看出意义，类似下面这种：
 
@@ -532,15 +532,15 @@ src="视觉错位2.mp4" width="400" controls autoplay loop muted>your browser do
 
 在太阳神庙，反光使得基座变成白色，路径得以走通。
 
-src="反光1.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/反光1.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 借助反光，环境谜题才得以现身：
 
-src="反光2.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/反光2.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 换一个角度，还有另一个环境谜题：
 
-src="反光3.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/反光3.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 ### 倒影
 
@@ -552,21 +552,21 @@ src="反光3.mp4" width="400" controls autoplay loop muted>your browser does not
 
 在风车叶片的转动中，才能从起点走向终点。
 
-src="风车叶片.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/风车叶片.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 ### 动态环绕
 
 话不多说，直接滑跪吧。
 
-src="动态环绕1.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/动态环绕1.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 你以为这就完了，别忘了还有水里的倒影呢。
 
-src="动态环绕2.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/动态环绕2.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 当你发现了水里的倒影原来也是环境谜题，因而沾沾自喜，那你大概率又要和一个明目张胆的谜题失之交臂了，因为你的注意力被集中到了城墙边缘。
 
-src="动态环绕3.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/动态环绕3.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 ### 色彩
 
@@ -646,7 +646,7 @@ src="动态环绕3.mp4" width="400" controls autoplay loop muted>your browser do
 
 这类谜题面板本身是不能靠划线来输入的，需要你去改变环境，在玻璃平台上行走就在面板上输入了路径。因此，约束也由玻璃平台约束和面板约束共同构成。
 
-src="环境反向输入1.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/环境反向输入1.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 俯视 4 个玻璃平台的全貌，此时平台又化身为环境谜题，真就是题中题。
 
@@ -668,7 +668,7 @@ src="环境反向输入1.mp4" width="400" controls autoplay loop muted>your brow
 
 有的光照区域是限时的：
 
-src="光照区域2.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/光照区域2.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 ## 光线反射
 
@@ -730,7 +730,7 @@ src="光照区域2.mp4" width="400" controls autoplay loop muted>your browser do
 
 操作方式如下：
 
-src="视线遮挡2.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/视线遮挡2.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 另外，山顶的谜题，两个雕像的腿部对通道造成了阻断，从绝大多数的视角来看，问题都是无解的，你必须找到那个特殊的遮挡角度，使问题变得有解。
 
@@ -750,17 +750,17 @@ src="视线遮挡2.mp4" width="400" controls autoplay loop muted>your browser do
 
 两种解法分别使平台停靠在两岸。
 
-src="平台平移1.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/平台平移1.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 控制平台停靠的位置：
 
-src="平台平移2.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/平台平移2.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 ### 平台升降
 
 在工厂，这个面板用来控制电梯升降。
 
-src="平台升降1.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/平台升降1.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 如果说上面的电梯面板还不够形象直观，那么洞穴里的面板确实很像电梯：
 
@@ -770,11 +770,11 @@ src="平台升降1.mp4" width="400" controls autoplay loop muted>your browser do
 
 直角三角形的斜边和两直角边分别代表平台的站姿和卧姿。
 
-src="平台俯仰1.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/平台俯仰1.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 另一种控制平台站卧的方式：
 
-src="平台俯仰2.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/平台俯仰2.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 ### 平台转动
 
@@ -786,11 +786,11 @@ src="平台俯仰2.mp4" width="400" controls autoplay loop muted>your browser do
 
 ### 吊钩平移
 
-src="吊钩平移.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/吊钩平移.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 ### 导轨平移
 
-src="导轨平移.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/导轨平移.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 ## 音调
 
@@ -802,7 +802,7 @@ src="导轨平移.mp4" width="400" controls autoplay loop muted>your browser doe
 
 在面板上规划出的路径，会同步生成实体的踏板，这样就可以去对岸了。
 
-src="踏板生成.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/踏板生成.mp4" width="400" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 # 精彩谜题解读：隔岸同步
 
@@ -936,6 +936,6 @@ The Witness 最有魅力的是，你在游戏世界的行为会对现实世界�
 
 <div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/boy.jpg" width="280"/></div>
 
- <p style="color: #939393; text-align: center;">一个梗图：我看见圆形和线条，在我点击之前它们从未意识到自己是谜题</p>
+<p style="color: #939393; text-align: center;">一个梗图：我看见圆形和线条，在我点击之前它们从未意识到自己是谜题</p>
 
 <div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post15/girl.jpg" width="280"/></div>

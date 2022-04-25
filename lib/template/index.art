@@ -2,7 +2,7 @@
 <html lang="{{ config.language }}">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <title>{{ config.name }}</title>
     <link rel="icon" href="{{ config.icon }}">
     <link rel="stylesheet" href="/css/main.css">
@@ -90,6 +90,7 @@
         .achieve-item .cover {
             font-size: 0;
             border-left: 1px solid #ddd;
+			min-width: 166.25px;
         }
         .achieve-item .info .date {
             font-size: 80%;
@@ -136,7 +137,7 @@
         </div>
         <div class="navbar-right">
             {{each pages}}
-            <a href="/{{ $value.title }}" target="_blank">{{ $value.text }}</a>
+            <a href="./{{ $value.title }}" target="_blank">{{ $value.text }}</a>
             {{/each}}
         </div>
     </nav>
@@ -145,11 +146,13 @@
         <li class="achieve-item">
             <div class="info">
                 <div class="date">{{ $value.date }}</div>
-                <a href="/post/{{ $value.title }}" target="_blank">{{ $value.title }}</a>
+                <a href="./post/{{ $value.title }}" target="_blank">{{ $value.title }}</a>
             </div>
+            {{if config.cover}}
             <div class="cover">
                 <img src="{{ $value.cover }}"/>
             </div>
+            {{/if}}
         </li>
         {{/each}}
     </ul>

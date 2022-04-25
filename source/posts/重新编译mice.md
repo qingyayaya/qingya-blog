@@ -1,5 +1,5 @@
 ---
-title: 重新编译mice
+title: 重新编译 mice
 date: 2021-11-01 20:00:00
 cover: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover13.png
 ---
@@ -12,7 +12,7 @@ cover: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover13.png
 
 <div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post13/matrix67.png" width="350" style="border:1px solid black"/></div>
 
-和这一比较，断更 1 个月而已，都是小场面。其实博客有悄咪咪地更新过两篇文章，只不过是那种交互式的，不适合发在公众号。（可算是把[以前的坑](https://qingyaya.gitee.io/2021/08/27/%E9%9D%92%E5%B4%96%E5%90%8C%E5%AD%A6%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B8%8A%E7%BA%BF%E5%95%A6/)给填上了）
+和这一比较，断更 1 个月而已，都是小场面。其实博客有悄咪咪地更新过两篇文章，只不过是那种交互式的，不适合发在公众号。（可算是把[以前的坑](https://qingyayaya.github.io/post/%E9%9D%92%E5%B4%96%E5%90%8C%E5%AD%A6%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B8%8A%E7%BA%BF%E5%95%A6/)给填上了）
 
 ------
 

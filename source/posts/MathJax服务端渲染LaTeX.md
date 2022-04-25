@@ -10,7 +10,7 @@ cover: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover17.png
 >
 > Client Side Render，客户端渲染，指服务器只返回一个 html 模板，浏览器执行 js 代码渲染出网页。
 
-我要把[我的博客](https://qingyaya.gitee.io/)从原本**客户端渲染**的方式修改成**服务端渲染**的方式。其中的一个难点是如何实现服务端渲染 LaTeX。
+我要把[我的博客](https://qingyayaya.github.io/)从原本**客户端渲染**的方式修改成**服务端渲染**的方式。其中的一个难点是如何实现服务端渲染 LaTeX。
 
 # MathJax
 
@@ -24,9 +24,9 @@ MathJax 是所有现代浏览器（ IE 不属于现代浏览器）通用的 LaTe
 
 # 客户端渲染的弊端
 
-在博客上显示 LaTeX 数学公式，一直很困扰我，倒不是说技术上有多难实现（前面也说了 MathJax 的用法是弱智级别的），而是我有些文章使用了上百个 LaTeX 公式，以《[从 ln(1+x) 的连分式展开谈起](https://qingyaya.gitee.io/post/%E4%BB%8E%20ln(1+x)%20%E7%9A%84%E8%BF%9E%E5%88%86%E5%BC%8F%E5%B1%95%E5%BC%80%E8%B0%88%E8%B5%B7/)》为例：
+在博客上显示 LaTeX 数学公式，一直很困扰我，倒不是说技术上有多难实现（前面也说了 MathJax 的用法是弱智级别的），而是我有些文章使用了上百个 LaTeX 公式，以《[从 ln(1+x) 的连分式展开谈起](https://qingyayaya.github.io/post/%E4%BB%8E%20ln(1+x)%20%E7%9A%84%E8%BF%9E%E5%88%86%E5%BC%8F%E5%B1%95%E5%BC%80%E8%B0%88%E8%B5%B7/)》为例：
 
- <video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post17/CSR.mp4" width="300" controls autoplay loop muted>your browser does not support the video tag</video>
+<div style="text-align:center;"><video src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post17/CSR.mp4" width="300" controls autoplay loop muted>your browser does not support the video tag</video></div>
 
 整个渲染过程花了 10 多秒！我们总是希望一个页面显示的越快越好。而且，公式提取 → 公式处理 → 公式预显示 → 换成TeX字体的整个流程下来，公式的形式变来变去，页面上蹿下跳，真就还不如等 10 秒全部渲染完后再显示出来呢。不仅影响读者的阅读体验，对我个人来说这种糟糕的设计非常折磨人。
 
@@ -204,7 +204,7 @@ var defs = MathJax.startup.output.fontCache.getCache();
 MathJax.startup.output.fontCache.clearCache();
 ```
 
-到此为止，算是把 TeX 转 SVG 彻底搞定了。对比一下引用`<path>`和不引用的区别，还以《[从 ln(1+x) 的连分式展开谈起](https://qingyaya.gitee.io/post/%E4%BB%8E%20ln(1+x)%20%E7%9A%84%E8%BF%9E%E5%88%86%E5%BC%8F%E5%B1%95%E5%BC%80%E8%B0%88%E8%B5%B7/)》为例，不引用时生成的静态 html 文件大小为 1.3 MB，引用后大小为 761 KB，**体积直接减半**，瘦身效果明显。
+到此为止，算是把 TeX 转 SVG 彻底搞定了。对比一下引用`<path>`和不引用的区别，还以《[从 ln(1+x) 的连分式展开谈起](https://qingyayaya.github.io/post/%E4%BB%8E%20ln(1+x)%20%E7%9A%84%E8%BF%9E%E5%88%86%E5%BC%8F%E5%B1%95%E5%BC%80%E8%B0%88%E8%B5%B7/)》为例，不引用时生成的静态 html 文件大小为 1.3 MB，引用后大小为 761 KB，**体积直接减半**，瘦身效果明显。
 
 <div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post17/fat.gif" width="180"/></div>
 

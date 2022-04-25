@@ -2,7 +2,7 @@
 <html lang="{{ config.language }}">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <title>{{ title }}</title>
     <link rel="icon" href="{{ config.icon }}">
     <link rel="stylesheet" href="/css/main.css">

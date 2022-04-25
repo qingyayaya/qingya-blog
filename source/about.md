@@ -15,8 +15,8 @@ index: 2
 
 **兴趣爱好：**
 
-- 喜欢轨道力学🌏、MATLAB、Mathematica、Javascript、独立博客、docsify、Python
-- 喜欢推理小说📘、古典诗词、美食博主🍰、二次元萌妹🧎‍♂️、蓉儿、地图、手机主题、解谜游戏、我的世界🔨、喵赛克🎵等等等有趣的东西
+- 喜欢轨道力学🌏、MATLAB、Mathematica、Javascript、docsify、Python
+- 喜欢推理小说📘、古典诗词、独立博客、美食博主🍰、二次元萌妹🧎‍♂️、蓉儿、地图、解谜游戏、汽车大盗(Grand Theft Auto)、我的世界🔨、喵赛克🎵、手机主题等等等有趣的东西
 - 喜欢买书📚，也喜欢做手工书📓
 
 ------
@@ -24,14 +24,13 @@ index: 2
 **关于博客：**
 
 - 用来存一些读书笔记
-- 随缘更新，宁缺毋滥
+- 随缘更新，既缺又滥
 - 所有内容，写给自己
 
 ------
 
 **联系方式：**
 
-- gitee：[https://gitee.com/qingyaya/](https://gitee.com/qingyaya/)
 - 邮箱：[liruilong@mail.nwpu.edu.cn](mailto:liruilong@mail.nwpu.edu.cn)
 - 微信：lw186lw
 - 微信公众号：[青崖同学](https://mp.weixin.qq.com/mp/homepage?__biz=Mzg3MjY1MzY4Mg==&hid=1&sn=3cb69e7664ca6622d4cd46e6e727a2c3&scene=18&devicetype=android-30&version=28000653&lang=zh_CN&nettype=ctnet&ascene=7&session_us=gh_4858133c6950&pass_ticket=gSgFHEOyXA8mw5vsLAPfXKGw7%2F036G2Rcn%2B23RNFar5I0qr8zdXeyppv2zHRjHlq&wx_header=1&scene=1)
@@ -42,8 +41,6 @@ index: 2
 
 **本站的正常运行，离不开以下开源项目或网站的支持：**
 
-[Gitee](https://gitee.com)\
-[Gitee Pages](https://gitee.com/help/articles/4136)\
 [Github](https://github.com)\
 [highlight.js](https://github.com/highlightjs/highlight.js)\
 [jsDelivr](https://www.jsdelivr.com/)\

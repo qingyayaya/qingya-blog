@@ -1,5 +1,5 @@
 ---
-title: Lissajous轨道如何施加脉冲来规避日食？
+title: Lissajous 轨道如何施加脉冲来规避日食？
 date: 2022-03-09 18:00:00
 cover: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover16.png
 ---

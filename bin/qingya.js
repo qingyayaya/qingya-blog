@@ -3,17 +3,36 @@
 process.title = 'qingya';
 
 const program = require('commander');
+const fs = require('fs')
+const path = require('path');
+const appInfo = require('../package.json');
 const qingya = require('../lib/index');
 
 program
-  .version('0.0.1', '-v, --version')
-  .option('-g, --generate', 'Generate all')
+  .version(appInfo.version, '-v, --version')
+  .option('-g, --generate', 'Generate')
+  .option('-c, --clear', 'Clear MD5 history')
+  .option('-d, --deploy', 'Deploy to git')
+  .option('-i, --initgit', 'Initialize git')
+  .option('-p, --push', 'Push to git')
   .parse(process.argv);
 
-// generate
 if (program.generate) {
+  new qingya().generate();
+}
 
-  var qy = new qingya();
-  qy.generate();
+if (program.clear) {
+  new qingya().clearMD5();
+}
 
+if (program.deploy) {
+  new qingya().deploy('update');
+}
+
+if (program.initgit) {
+  new qingya().initgit();
+}
+
+if (program.push) {
+  new qingya().push();
 }
