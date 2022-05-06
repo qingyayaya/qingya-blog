@@ -26,7 +26,7 @@ if (program.clear) {
 }
 
 if (program.deploy) {
-  new qingya().deploy('update');
+  new qingya().deploygit('update');
 }
 
 if (program.initgit) {
@@ -34,5 +34,5 @@ if (program.initgit) {
 }
 
 if (program.push) {
-  new qingya().push();
+  new qingya().pushgit();
 }
