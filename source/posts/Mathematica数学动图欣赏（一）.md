@@ -114,3 +114,6 @@ $$
 
 <div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post3/run.gif" width="180"/></div>
 
+
+
+<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post3/qrcode.png" width="400"/></div>

@@ -6,6 +6,11 @@ index: 1
 
 <style type="text/css">
 /* book */
+.title {
+    text-align: center;
+    font-size: 2.0rem;
+    margin-bottom: 10px;
+}
 .book-content {
     display: flex;
     align-items: stretch;
@@ -130,46 +135,32 @@ index: 1
 
 <!-- book -->
 
-<p style="text-align:center; font-size:2.0rem; margin-bottom:10px;">看过的书</p>
-
+<p class="title">看过的书</p>
 <div class="book-content">加载中，请稍等...</div>
 <div class="book-loadmore">加载更多</div>
-
 <br /><hr><br />
 
 <script type="text/javascript">
-
-/* 获取并处理图书数据 */
 (function() {
-
-    // 每次加载多少本书
-    const bookStep = 12;
-    
-    // 定义变量
-    var book = [];
+    const bookStep = 12; // 每次加载多少本书
+    var book = []; // 数组
     var bookHead = 0;  // 当前Head指向谁
 
-    var bookJSON = "https://cdn.jsdelivr.net/gh/qingyayaya/cdn/json/books.json";
-
     // 获取json
-    var request = new XMLHttpRequest();
-    request.open("get", bookJSON);
-    request.send(null);
-    request.onload = () => {
-
-        if (request.status == 200) {
-        
+    var xhr = new XMLHttpRequest();
+    xhr.open("get", "https://cdn.jsdelivr.net/gh/qingyayaya/cdn/json/books.json");
+    xhr.send(null);
+    xhr.onload = () => {
+        if (xhr.status == 200) {
             // 给book赋值
-            book = JSON.parse(request.responseText);
-            
-            // 生成容器
+            book = JSON.parse(xhr.responseText);
+
+            // 清空内容
             document.querySelector('.book-content').innerHTML = '';
             
             // 加载一次
             parseBookData();
-
         }
-        
     };
 
     // “加载更多”按钮
@@ -178,20 +169,20 @@ index: 1
     // 加载一次
     function parseBookData() {
         if (bookHead < book.length) {
-            data = book.slice(bookHead, bookHead+bookStep);
-            data.forEach( element => {
-                createBookItem(element);
+            book.slice(bookHead, bookHead+bookStep).forEach(e => {
+                createBookItem(e);
             });
             bookHead += bookStep;
-        } 
+        }
         if (bookHead >= book.length) {
-            document.querySelector('.book-content').innerHTML = '没有了';
+            document.querySelector('.book-loadmore').innerHTML = '没有了';
+            document.querySelector('.book-loadmore').onclick = null;
         }
     }
 
     // 生成一本书
     function createBookItem(e) {
-        var html = `
+        document.querySelector('.book-content').innerHTML += `
             <div class="book-item">
                 <a class="book" target="_blank" href="https://book.douban.com/subject/${e.doubanUrl}/">
                     <div style="position: relative;">
@@ -202,11 +193,8 @@ index: 1
                     <img class="book-image" src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/book/${e.photoUrl}">
                 </a>
             </div>`;
-        document.querySelector('.book-content').innerHTML += html;
     }
-
 })();
-
 </script>
 
 <!-- record -->
@@ -216,36 +204,22 @@ index: 1
 </div>
 
 <script type="text/javascript">
-
-/* 获取并处理记录数据 */
 (function() {
-    
-    var recordJSON = "https://cdn.jsdelivr.net/gh/qingyayaya/cdn/json/records.json";
-    
-    var request = new XMLHttpRequest();
-    request.open("get", recordJSON);
-    request.send(null);
-    request.onload = () => {
-
-        if (request.status == 200) {
-            
-            var data = JSON.parse(request.responseText);
+    var xhr = new XMLHttpRequest();
+    xhr.open("get", "https://cdn.jsdelivr.net/gh/qingyayaya/cdn/json/records.json");
+    xhr.send(null);
+    xhr.onload = () => {
+        if (xhr.status == 200) {
             var html = '';
-            
-            data.forEach( e => {
-                console.log(e)
+            JSON.parse(xhr.responseText).forEach(e => {
                 html += `
                     <li class="record-item">
                         <div class="record-content">${e.content}</div>
                         <p class="record-info">${e.author}《${e.reference}》</p>
                     </li>`;
             });
-            
             document.querySelector('.record').innerHTML += html;
-            
         }
     }
-    
 })();
-
 </script>
