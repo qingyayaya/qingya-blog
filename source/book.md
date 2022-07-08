@@ -148,7 +148,7 @@ index: 1
 
     // 获取json
     var xhr = new XMLHttpRequest();
-    xhr.open("get", "https://cdn.jsdelivr.net/gh/qingyayaya/cdn/json/books.json");
+    xhr.open("get", "https://gcore.jsdelivr.net/gh/qingyayaya/cdn/json/books.json");
     xhr.send(null);
     xhr.onload = () => {
         if (xhr.status == 200) {
@@ -190,7 +190,7 @@ index: 1
                             <p>${e.name}<br /><br />${e.author}</p>
                         </div>
                     </div>
-                    <img class="book-image" src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/book/${e.photoUrl}">
+                    <img class="book-image" src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/book/${e.photoUrl}">
                 </a>
             </div>`;
     }
@@ -206,7 +206,7 @@ index: 1
 <script type="text/javascript">
 (function() {
     var xhr = new XMLHttpRequest();
-    xhr.open("get", "https://cdn.jsdelivr.net/gh/qingyayaya/cdn/json/records.json");
+    xhr.open("get", "https://gcore.jsdelivr.net/gh/qingyayaya/cdn/json/records.json");
     xhr.send(null);
     xhr.onload = () => {
         if (xhr.status == 200) {

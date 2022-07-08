@@ -1,16 +1,16 @@
 ---
 title: 重新编译 mice
 date: 2021-11-01 20:00:00
-cover: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover13.png
+cover: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover13.png
 ---
 
 在我的不懈努力之下，公众号终于从**周更**变成了**月更**，说不定将来还会变成**季更**。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post13/dog.jpg" width="150"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post13/dog.jpg" width="150"/></div>
 
 某师兄早就嚷嚷着催更了，其实我想说，有的博客曾经断更长达五年：
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post13/matrix67.png" width="350" style="border:1px solid black"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post13/matrix67.png" width="350" style="border:1px solid black"/></div>
 
 和这一比较，断更 1 个月而已，都是小场面。其实博客有悄咪咪地更新过两篇文章，只不过是那种交互式的，不适合发在公众号。（可算是把[以前的坑](https://qingyayaya.github.io/post/%E9%9D%92%E5%B4%96%E5%90%8C%E5%AD%A6%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E4%B8%8A%E7%BA%BF%E5%95%A6/)给填上了）
 
@@ -18,7 +18,7 @@ cover: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover13.png
 
 今天聊聊 MATLAB。~~咦，MATLAB 一直不都是调侃的对象吗，怎么成主角了？~~No No No，所谓“圣人无常师”，只有小学生才会争论语言的高低贵贱，成年人都是驾驭自如为我所用的。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post13/pupil.jpg" width="150"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post13/pupil.jpg" width="150"/></div>
 
 !> 本教程只针对 Microsoft Windows 10 操作系统！
 
@@ -32,7 +32,7 @@ mice 是 MATLAB 版本的 SPICE Toolkit。SPICE Toolkit 享有盛名，这里不
 
 显然不能坐等官方团队在下一个版本进行适配，应该主动对 mice 进行定制，按照自己的需求增加功能，最后重新编译 mice。只有这样，以后才能更好地、可持续地利用 mice。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post13/xiaowanzi.jpg" width="240"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post13/xiaowanzi.jpg" width="240"/></div>
 
 # 下载 mice
 
@@ -213,7 +213,7 @@ end
 
 **注意事项如下，请务必认真阅读：**
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post13/document.jpg" width="200"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post13/document.jpg" width="200"/></div>
 
 > 1. 测试环境为 MATLAB **2020b** 和 Microsoft Visual Studio **14.0**
 > 2. 脚本应放置在`<mice>\src\mice\`路径中，即与`mice.c`同一路径
@@ -296,7 +296,7 @@ end
 
 !> 最后，即使按照以上步骤做了，也不一定能成功，比较依赖编译环境。但是，在 MATLAB **2020b** 和 Microsoft Visual Studio **14.0** 环境下，经测试，没有问题。**如果没成功，请不要迁怒于任何一个工具**，它们都是相当优秀的。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post13/girl.jpg" width="150"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post13/girl.jpg" width="150"/></div>
 
 # 编译`vcf2c.lib`的步骤
 
@@ -317,4 +317,4 @@ end
 9. 完成
 10. 如果计算机装有 Mathematica，不妨去`<Mathematica安装路径>\SystemFiles\Components\WSMCore\lib\win64\VS2013`路径下，看看能否找到`f2c.lib`，这就是我们想要的库文件，Mathematica 已经帮我们编译好了，亲测可用
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post13/bed.gif" width="340"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post13/bed.gif" width="340"/></div>

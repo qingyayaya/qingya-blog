@@ -1,20 +1,20 @@
 ---
 title: 时隔 5 年，SPICE 工具箱迎来更新
 date: 2022-03-29 16:00:00
-cover: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover21.png
+cover: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover21.png
 ---
 
 其实这并不算是一个新闻，因为早在今年 1 月 3 日，[naif 官网](https://naif.jpl.nasa.gov/pub/naif/)就已经悄咪咪地发布了版本号 N0067 的全新版本，距上一次版本更新已经过去了 5 年。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post21/N0067.jpg" width="400"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post21/N0067.jpg" width="400"/></div>
 
 寒假期间我大概看了看[新增的功能](https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/MATLAB/info/whatsnew.html#Version%2067%20---%20January%202022)，比较吸引我的是`cspice_spkw09`函数、azimuth/elevation、一个叫做 Switch Frames 的新坐标系统，以及新增 95 个 MATLAB API，让人不禁跃跃欲试。然而假期生活实在是太安逸了。直到开学后我才把新版下载下来。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post21/dog.gif" width="180"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post21/dog.gif" width="180"/></div>
 
 我曾经在[重新编译 mice](https://qingyayaya.github.io/post/%E9%87%8D%E6%96%B0%E7%BC%96%E8%AF%91%20mice)提到过，因为 N0066 版本的 mice 没有提供`cspice_spkw09`函数，又始终没有更新的动静，所以我尝试自己写了这个函数，又重新编译了 mice。这次更新，官方终于给出了`cspice_spkw09`函数，我也和那些 bug 说再见了。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post21/mycode.jpg" width="240"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post21/mycode.jpg" width="240"/></div>
 
 值得关注的更新点：
 
@@ -32,4 +32,4 @@ cover: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover21.png
 - 增加了大量的内建 Body-Fixed Frames
 - 增加了 95 个 MATLAB API，如下：
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post21/newAPI.png" width="400"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post21/newAPI.png" width="400"/></div>

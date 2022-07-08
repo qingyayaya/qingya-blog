@@ -1,7 +1,7 @@
 ---
 title: Lissajous 轨道如何施加脉冲来规避日食？
 date: 2022-03-09 18:00:00
-cover: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover16.png
+cover: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover16.png
 ---
 
 最近阅读了一篇介绍 Lissajous 轨道借助不变流形来规避日食的论文，《Eclipse Avoidance for Lissajous Orbits Using Invariant Manifolds》，虽然是 2004 年发表的，但是思路巧妙、方法可行、结果完整。原文涉及到繁琐的数学推导，不过推导过程被作者写的很省略，往往用一句 after some cumbersome algebra 带过，所以读起来是很吃力的。那么这篇笔记就是详细地还原一下那些 cumbersome algebra，供以后参考。
@@ -20,7 +20,7 @@ $$
 
 圆型限制性三体问题有 5 个平动点。其中 3 个在 $X$ 轴上，称为共线平动点。另外 2 个称为三角平动点。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post16/equilibrium.png" width="400"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post16/equilibrium.png" width="400"/></div>
 
 这里只关注这 3 个共线平动点，它们分别满足：
 $$
@@ -235,7 +235,7 @@ $$
 
 三维轨迹如下
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post16/lissajous.gif" width="600"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post16/lissajous.gif" width="600"/></div>
 
 # 施加 $z$ 方向脉冲
 
@@ -333,7 +333,7 @@ y(t_m) &= c A_{1}^{(f)} e^{\lambda t_m} - c A_{2}^{(f)} e^{-\lambda t_m} - \bar{
 $$
 太复杂了，借助 Mathematica 求解：
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post16/solve1.png" width="600" style="border:1px solid black"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post16/solve1.png" width="600" style="border:1px solid black"/></div>
 
 整理一下
 $$
@@ -459,7 +459,7 @@ $$
 
 效仿 $z$ 方向脉冲的情况，可以解出 $A_{k}^{(f)} - A_{k}^{(i)},k=1,2,3,4$ 的值。借助 Mathematica 求解：
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post16/solve2.png" width="600" style="border:1px solid black"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post16/solve2.png" width="600" style="border:1px solid black"/></div>
 
 整理一下
 $$
@@ -506,11 +506,11 @@ $$
 
 以 $\Phi$ 为横坐标，以 $\Psi$ 为纵坐标，随着时间 $t$ 的增加，图像长下面的样子：
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post16/EPP1.png" width="500"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post16/EPP1.png" width="500"/></div>
 
 $(x,y,z) \rightarrow (\Phi,\Psi)$ 把 Lissajous 轨道上的每一个状态映射到了有效相平面上的一点。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post16/EPP2.png" width="500"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post16/EPP2.png" width="500"/></div>
 
 # 规避日食
 
@@ -535,8 +535,8 @@ $$
 
 下图中，A 代表航天器在有效相平面上的初始位置，如果不干预，它将进入日食区域。通过在 B 处施加 $xy$ 方向的脉冲，可以把 $\Phi$ 调整到 C 处，进而躲避日食区域。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post16/maneuver_xy.png" width="500"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post16/maneuver_xy.png" width="500"/></div>
 
 施加 $z$ 方向的脉冲原理相同。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post16/maneuver_z.png" width="500"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post16/maneuver_z.png" width="500"/></div>

@@ -1,12 +1,12 @@
 ---
 title: JSXGraph - 尺规作正十七边形
 date: 2021-10-17 20:00:00
-cover: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover12.png
+cover: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover12.png
 ---
 
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jsxgraph@1.3.2/distrib/jsxgraph.css"/>
+<link rel="stylesheet" type="text/css" href="https://gcore.jsdelivr.net/npm/jsxgraph@1.3.2/distrib/jsxgraph.css"/>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jsxgraph@1.3.2/distrib/jsxgraphcore.js"></script>
+<script type="text/javascript" src="https://gcore.jsdelivr.net/npm/jsxgraph@1.3.2/distrib/jsxgraphcore.js"></script>
 
 <style type="text/css">
 .jxgbox {

@@ -1,16 +1,16 @@
 ---
 title: 基于 marked.js 定制一个 Markdown 解析器
 date: 2022-03-28 17:00:00
-cover: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover20.png
+cover: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover20.png
 ---
 
 [marked.js](https://marked.js.org/) 是一款轻量级的快速 Markdown 解析器，可以运行在浏览器或服务器（ Node.js 环境）上，著名的 [Hexo](https://hexo.io/) 和 [docsify](https://docsify.js.org/) 等工具都依赖它，截至 2022 年 1 月 20 日，在 [Github](https://github.com/markedjs/marked) 的 Star 数是 26700+
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/star.png" width="360"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/star.png" width="360"/></div>
 
 在 [npm](https://www.npmjs.com/package/marked) 的周下载量高达 429 万，其火热程度可见一斑：
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/npm.png" width="360" style="border:1px solid black"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/npm.png" width="360" style="border:1px solid black"/></div>
 
 # 为什么要改造 marked.js
 
@@ -49,7 +49,7 @@ Hexo 先读取 Markdown 文件，把字符串交给 marked.js 解析，`$`包裹
 
 按照这样的思路，连带着把问题 4 也解决了，我让它认为`?>`是有意义的即可。不止如此，以后遇到新的需求，我仍然可以随心所欲地扩展语法，这样才**不失为解决问题的上策**。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/liangzai.gif" width="150"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/liangzai.gif" width="150"/></div>
 
 那么，我需要扩展两个功能：
 
@@ -62,35 +62,35 @@ Hexo 先读取 Markdown 文件，把字符串交给 marked.js 解析，`$`包裹
 
 好在我找到一篇有帮助的[教程](https://blog.csdn.net/qq_22241923/article/details/106900403)，作者明确说明，得改，必须改动源代码。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/damie.jpg" width="150"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/damie.jpg" width="150"/></div>
 
 于是我也去逐字逐句地阅读了 marked.js 的源代码，彻底弄清楚了它解析 Markdown 的原理。整个源代码的结构如下：
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/class.png" width="220"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/class.png" width="220"/></div>
 
 `marked.js`提供了入口函数，把 Markdown 字符串输入进去，它会返回解析后的 HTML。所以，从它开始读起。首先，词法分析器`Lexer`类对字符串进行分析，得到`tokens`。然后，把`tokens`交给解析器`Parser`类，得到 HTML。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/marked.png" width="400"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/marked.png" width="400"/></div>
 
 `Lexer.js`得到 blockTokens 和 inlineTokens 两种 token，分别代表 HTML 的块级元素和行级元素：
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/Lexer.png" width="400"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/Lexer.png" width="400"/></div>
 
 以 blockTokens 为例，在一个 while 循环中，对字符串`src`进行匹配，`newline`，`code`，`fences`，`header`，......，挨个尝试，直到匹配到一个 token：
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/blockTokens.png" width="400"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/blockTokens.png" width="400"/></div>
 
 比如，匹配到 list 列表后，先把对应的字符串从`src`中掐掉，再把得到的 token 压进`tokens`数组中。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/list.png" width="400"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/list.png" width="400"/></div>
 
 那么 token 究竟是怎么匹配出来的，需要阅读`Tokenizer.js`。每种块级元素和行内元素在 Tokenizer 类中都有对应的成员函数，在成员函数里定义了生成 token 的具体方法。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/Tokenizer.png" width="400"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/Tokenizer.png" width="400"/></div>
 
 下面需要重点关注 rules，阅读`rules.js`。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/rules.png" width="400"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/rules.png" width="400"/></div>
 
 原来`rules.block.newline`是一个正则表达式，通过执行`exec()`方法就可以对字符串进行匹配。
 
@@ -98,15 +98,15 @@ Hexo 先读取 Markdown 文件，把字符串交给 marked.js 解析，`$`包裹
 
 到此为止，弄清楚了词法分析器`Lexer`类和分词器`Tokenizer`类是如何从字符串中提取出 token 的，下面解析器`Parser`类将对 token 进行解析。阅读`Parser.js`，它通过 for 循环对`tokens`进行遍历，根据每个 token 的 type 属性选择对应的渲染方式。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/Parser.png" width="400"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/Parser.png" width="400"/></div>
 
 进入渲染环节，需要阅读`Renderer.js`，每种块级元素和行内元素在 Renderer 类中都有对应的成员函数，定义了具体渲染成什么样：
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/Renderer.png" width="400"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/Renderer.png" width="400"/></div>
 
 官方文档也给 Renderer 部分提供了明确的 [API](https://marked.js.org/using_pro#renderer)，并指出用户可以通过`marked.use()`定制成自己想要的渲染方式。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/api.png" width="400" style="border:1px solid black"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/api.png" width="400" style="border:1px solid black"/></div>
 
 不过，官方给出的定制自由度是不够的。自由度是不够是什么意思呢，官方按照内置的语法，把 Markdown 帮你解析好，你只能参与渲染这一最末端的环节，你可以把 blockquote 的渲染方式从：
 
@@ -130,7 +130,7 @@ blockquote(quote) {
 
 通过之前的分析，已经搞清楚了 marked.js 的工作机制，那么再进行语法扩展简直就是信手拈来了。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/dog.jpg" width="150"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/dog.jpg" width="150"/></div>
 
 第一步，编写正则表达式，用于匹配`$`符号：
 
@@ -295,4 +295,4 @@ blockquote(quote, flag) {
 
 总结一下本文：由于网上已知的 3 种解决方案都不能满足我的需求，于是我通过分析源代码，扩展了 marked.js 的语法，彻底解决了 marked.js 的一些痛点，以后再有新的需求也可轻松实现。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/yoohoo.jpg" width="150"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post20/yoohoo.jpg" width="150"/></div>

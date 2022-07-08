@@ -1,7 +1,7 @@
 ---
 title: Mathematica 数学动图欣赏（二）
 date: 2022-05-14 09:40:00
-cover: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover24.png
+cover: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover24.png
 ---
 
 - **Mathematica 数学动图欣赏**是一个不定时更新的系列，这是第二期，也是最后一期
@@ -12,29 +12,29 @@ cover: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover24.png
 
 # 动图 6
 
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post24/6.gif" width="400"/></div>
+<div align="center"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post24/6.gif" width="400"/></div>
 
 # 动图 7
 
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post24/7.gif" width="400"/></div>
+<div align="center"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post24/7.gif" width="400"/></div>
 
 # 动图 8
 
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post24/8.gif" width="400"/></div>
+<div align="center"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post24/8.gif" width="400"/></div>
 
 # 动图 9
 
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post24/9.gif" width="400"/></div>
+<div align="center"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post24/9.gif" width="400"/></div>
 
 # 动图 10
 
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post24/10.gif" width="400"/></div>
+<div align="center"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post24/10.gif" width="400"/></div>
 
 # 源代码
 
 关注青崖同学公众号，想获取哪个动图的源代码，就回复 **gif+序号**，比如 **gif1** 代表动图 1。示例：
 
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post3/getcode.jpg" width="400"/></div>
+<div align="center"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post3/getcode.jpg" width="400"/></div>
 
 # 结尾
 
@@ -44,4 +44,4 @@ cover: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover24.png
 
 
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post3/qrcode.png" width="400"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post3/qrcode.png" width="400"/></div>

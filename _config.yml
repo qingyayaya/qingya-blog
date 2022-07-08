@@ -4,8 +4,8 @@
 name: 青崖同学
 author: 青崖同学
 language: en
-icon: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/img/avatar.png
-logo: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/img/og_image.svg
+icon: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/img/avatar.png
+logo: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/img/og_image.svg
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -33,5 +33,5 @@ deploy:
   user_email: 898489431@qq.com
   user_name: qingyayaya
 
-# 是否对生成的html,js,css进行压缩
-minimize: false
+# 是否对生成的html, js, css进行压缩
+minimize: true

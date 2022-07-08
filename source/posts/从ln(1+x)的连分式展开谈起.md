@@ -1,24 +1,24 @@
 ---
 title: 从 ln(1+x) 的连分式展开谈起
 date: 2021-07-15 17:51:00
-cover: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover1.png
+cover: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover1.png
 ---
 
 第一次听说《An Introduction to the Mathematics and Methods of Astrodynamics》这本航天动力学最经典的教材，是在本科 Orbit Mechanics 这门课上。后来费了很大力气找到了电子版，一看 800 多页，旋即放弃。假期从图书馆找到了中文译本，打算好好啃一啃这本书。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post1/book%20cover.png" width="300"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post1/book%20cover.png" width="300"/></div>
 
 <p style="color: #939393; text-align: center;">（本书封面）</p>
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post1/book%20cover%20cn.jpg" width="300"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post1/book%20cover%20cn.jpg" width="300"/></div>
 
 <p style="color: #939393; text-align: center;">（中文译本）</p>
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post1/battin.jpg" width="300"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post1/battin.jpg" width="300"/></div>
 
 <p style="color: #939393; text-align: center;">（作者 Battin）</p>
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post1/ppt.png" width="600" style="border:1px solid black"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post1/ppt.png" width="600" style="border:1px solid black"/></div>
 
 <p style="color: #939393; text-align: center;">（老师的 PPT 截图）</p>
 
@@ -725,11 +725,11 @@ $$
 $$
 借助数学软件`Mathematica`。分别对二者从 1 阶展开到 40 阶，数值运算的精度设为 80 位精度，比较 $\pi$ 的近似值与精确值的误差，并对误差取常用对数（以 10 为底），代码如下
 
-<div style="overflow-x:auto;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post1/pi%20code.png" style="max-width:none;"/></div>
+<div style="overflow-x:auto;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post1/pi%20code.png" style="max-width:none;"/></div>
 
 结果如下图
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post1/pi%20plot.png" width="500"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post1/pi%20plot.png" width="500"/></div>
 
 可以看出，随着展开阶数的增加，连分式的误差呈指数衰减，而 Taylor 级数的误差只是线性衰减。事实上，想要得到 $\pi$ 的近似值 $3.1419526535$，连分式只需展开到 15 阶，而 Taylor 级数需要展开到第 50000 阶，所以难怪作者 Battin 吐槽说：
 
@@ -737,11 +737,11 @@ $$
 
 但是，前面毕竟只是个例，下面在 $x\in[0,1]$ 区间上对 $\arctan x$ 的连分式展开和 Taylor 展开进行对比，连分式展开到 10 阶，Taylor 展开 18 阶。由于`Mathematica`对 $\arctan x$ 的计算精度有限，所以不再指定数值运算的精度。代码如下
 
-<div style="overflow-x:auto;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post1/arctan%20code.png" style="max-width:none;"/></div>
+<div style="overflow-x:auto;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post1/arctan%20code.png" style="max-width:none;"/></div>
 
 结果如下图
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post1/arctan%20plot.png" width="500"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post1/arctan%20plot.png" width="500"/></div>
 
 整体来说，连分式展开比 Taylor 展开精度更高，而且避免了大量的幂运算（由于数值计算的精度有限，$[0,0.4]$ 区间的误差结果并没有参考价值）
 

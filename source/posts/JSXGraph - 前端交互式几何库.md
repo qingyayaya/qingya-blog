@@ -1,12 +1,12 @@
 ---
 title: JSXGraph - 前端交互式几何库
 date: 2021-10-17 18:00:00
-cover: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover11.png
+cover: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover11.png
 ---
 
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jsxgraph@1.3.2/distrib/jsxgraph.css"/>
+<link rel="stylesheet" type="text/css" href="https://gcore.jsdelivr.net/npm/jsxgraph@1.3.2/distrib/jsxgraph.css"/>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jsxgraph@1.3.2/distrib/jsxgraphcore.js"></script>
+<script type="text/javascript" src="https://gcore.jsdelivr.net/npm/jsxgraph@1.3.2/distrib/jsxgraphcore.js"></script>
 <style type="text/css">
 .jxgbox {
     width: 500px;
@@ -47,7 +47,7 @@ cover: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover11.png
 
 首先，这么好用的工具鲜为人知，在 Github 开源了 13 年仅收获 800 多个 Star，不禁让我想到“黄钟毁弃”一词。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post11/star.png" width="300"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post11/star.png" width="300"/></div>
 
 现代前端技术日新月异，前端可视化工具库也是层出不穷，一个比一个优秀。但是论及交互式几何绘制谁表现得最佳，我觉得非 JSXGraph 莫属。如果是 d3、ECharts 这样享有盛名的可视化工具库，我大可不写这篇博客，因为用的人大多了，但是 JSXGraph 的资料比较有限，还是有谈一谈的必要。
 
@@ -55,7 +55,7 @@ cover: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover11.png
 
 进入 JSXGraph 的[官网](https://jsxgraph.uni-bayreuth.de/wp/index.html)，会看到明显的 **Dynamic** 和 **Interactive** 这样的词汇，那么 JSXGraph 的 Interactive 究竟能达到怎样的效果？官网首页给出了一个演示，我直接搬运过来了。
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post11/girl.jpg" width="150"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post11/girl.jpg" width="150"/></div>
 
 请大胆地尝试拖动 $A$, $B$, $C$ 三个点：
 
@@ -150,7 +150,7 @@ cover: https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover11.png
 - 开源，LGPL 和 MIT 协议
 - 甚至兼容 IE 6，简直绝了
 
-<div style="text-align:center;"><img src="https://cdn.jsdelivr.net/gh/qingyayaya/cdn/pics/post11/niu.jpg" width="150"/></div>
+<div style="text-align:center;"><img src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/post11/niu.jpg" width="150"/></div>
 
 它的数学库支持：
 
