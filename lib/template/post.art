@@ -7,7 +7,7 @@
     <link rel="icon" href="{{ config.icon }}">
     <link rel="stylesheet" href="/css/main.css">
     {{if hasCode}}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.3.1/styles/github.css">
+    <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/highlight.js@11.3.1/styles/github.css">
     <link rel="stylesheet" href="https://fonts.loli.net/css2?family=Source+Code+Pro">
     {{/if}}
 </head>
@@ -20,6 +20,28 @@
         <div class="content">
             {{@ content}}
         </div>
+        {{if (type == 'post')}}
+        <div class="licensing">
+            <div class="licensing-title">
+                <p><strong>{{ title }}</strong></p>
+                <p><a href="./post/{{ title }}/">{{ config.url }}/post/{{ title }}/</a></p>
+            </div>
+            <div class="licensing-meta">
+                <div>
+                    <p class="licensing-item-title">作者</p>
+                    <p><a href="{{ config.url }}">{{ config.name }}</a></p>
+                </div>
+                <div>
+                    <p class="licensing-item-title">发布于</p>
+                    <p>{{ date }}</p>
+                </div>
+                <div>
+                    <p class="licensing-item-title">许可协议</p>
+                    <p><a href="https://creativecommons.org/">Creative Commons</a></p>
+                </div>
+            </div>
+        </div>
+        {{/if}}
     </article>
 </body>
 </html>
