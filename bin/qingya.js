@@ -4,7 +4,9 @@ process.title = 'qingya';
 
 const program = require('commander');
 const appInfo = require('../package.json');
-const { qingya } = require('../lib/index');
+const Qingya = require('../lib/index');
+
+var qingya = new Qingya();
 
 program
   .command('compile <type> <filenames...>')
@@ -28,7 +30,7 @@ program
   .option('-p, --push', 'push to git')
   .parse(process.argv);
 
-if (program.initgit) {
+if (program.init) {
   qingya.initgit();
 }
 

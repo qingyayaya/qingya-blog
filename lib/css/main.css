@@ -1,0 +1,311 @@
+:root {
+    --blue-color: #428bca;
+    --border-color: #d0d0d0;
+    --strong-color: #363636;
+    --hr-color: #dddddd;
+    --code-color: #e96900;
+    --gray-bg-color: #f6f6f6;
+    --tip-color: #f66;
+}
+
+body {
+    min-width: 300px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+article {
+    margin: 10px;
+    padding: 20px 30px;
+    border: 1px solid var(--border-color);
+    overflow: auto;
+}
+
+li,
+p {
+    line-height: 1.6;
+}
+
+p {
+    text-align: justify;
+}
+
+strong {
+    color: var(--strong-color); /* 加粗用纯黑色并不好 */
+    font-weight: 700;
+}
+
+hr {
+    background-color: var(--hr-color);
+    border: none;
+    display: block;
+    height: 2px;
+    margin-bottom: 1.5rem;
+}
+
+/* 超链接 */
+a {
+    color: var(--blue-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a>strong {
+    color: var(--blue-color);
+}
+
+a>code {
+    text-decoration: underline;
+}
+
+/* 图片 */
+img {
+    max-width: 100%;
+}
+
+/* 代码块 */
+pre {
+    overflow: auto;
+    padding: 20px;
+    border-radius: 3px;
+    position: relative;
+    word-wrap: normal;
+}
+
+pre::after {
+    content: attr(data-lang);
+    color: #ccc;
+    font-size: 0.6rem;
+    font-weight: 600;
+    line-height: 15px;
+    padding: 5px 20px 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+pre>code {
+    display: block;
+    color: black;
+    line-height: 1.6;
+    max-width: inherit;
+    overflow: inherit;
+    white-space: inherit;
+}
+
+pre,
+code {
+    background: var(--gray-bg-color);
+    font-family: 'Source Code Pro', monospace, 'Microsoft YaHei';
+    font-size: 95%;
+}
+
+/* 行内代码 */
+code {
+    border-radius: 2px;
+    color: var(--code-color);
+    margin: 0 2px;
+    padding: 3px 5px;
+    white-space: pre-wrap;
+}
+
+/* 所有标题 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* 标题 */
+h1 {
+    font-size: 1.75rem;
+    line-height: 1.125;
+    margin-bottom: 1.2rem;
+    border-bottom: 1.0px solid var(--hr-color);
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-size: 1.0rem;
+}
+
+/* textarea */
+textarea {
+    background-color: var(--gray-bg-color);
+    font-size: 1rem;
+    font-family: 'Source Code Pro', monospace, 'Microsoft YaHei';
+}
+
+/* 表格相关 */
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+tr {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    background: none;
+}
+
+tr:nth-child(2n) {
+    background: var(--gray-bg-color);
+}
+
+td,
+th {
+    border: 1px solid var(--border-color);
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+th {
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+
+.table-box {
+    width: auto !important;
+    overflow-x: auto;
+}
+
+/* post顶部的title和date */
+p.title {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.75rem;
+}
+
+p.date {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+    color: darkgray;
+}
+
+/* 引用 */
+blockquote {
+    border-left: 3px lightgrey solid;
+    padding: 0px 10px;
+    margin: 0 0 1.5rem 0;
+    background: var(--gray-bg-color);
+    overflow: auto;
+    font-family: Palatino, Helvetica, STKaiti, SimSun, serif;
+}
+
+/* warning型引用 */
+div.warn {
+    background: var(--gray-bg-color);
+    border-radius: 2px;
+    padding: 2px 24px;
+    margin: 1.2em 0;
+    line-height: 1.6rem;
+}
+
+/* tip型引用 */
+div.tip {
+    background-color: var(--gray-bg-color);
+    border-bottom-right-radius: 2px;
+    border-left: 4px solid var(--tip-color);
+    border-top-right-radius: 2px;
+    margin: 2em 0;
+    padding: 2px 24px;
+    position: relative;
+}
+
+div.tip:before {
+    background-color: var(--tip-color);
+    border-radius: 100%;
+    color: #fff;
+    content: '!';
+    font-size: 14px;
+    font-weight: bold;
+    left: -12px;
+    line-height: 20px;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    top: 14px;
+}
+
+div.tip code {
+    background-color: var(--gray-bg-color);
+}
+
+/* MathJax公式 */
+.mjx-display {
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    overflow-x: auto;
+}
+
+/* licensing */
+.licensing {
+    background: var(--gray-bg-color);
+    border-radius: 4px;
+    overflow: hidden;
+    color: var(--strong-color);
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.licensing p {
+    margin: 0;
+}
+
+.licensing a {
+    color: var(--strong-color);
+}
+
+.licensing .licensing-title a {
+    font-size: 0.5rem;
+}
+
+.licensing .licensing-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.licensing .licensing-item-title {
+    font-size: 0.5rem;
+    font-weight: bold;
+}
+
+/* 滑动条 */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.06);
+    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.12);
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.24);
+}
