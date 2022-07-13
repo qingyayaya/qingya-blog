@@ -2,6 +2,7 @@
 title: Mathematica 画投影图
 date: 2021-09-11 12:00:00
 cover: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover7.png
+code: true
 ---
 
 

@@ -2,6 +2,7 @@
 title: Mathematica 数学动图欣赏（二）
 date: 2022-05-14 09:40:00
 cover: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover24.png
+code: false
 ---
 
 - **Mathematica 数学动图欣赏**是一个不定时更新的系列，这是第二期，也是最后一期

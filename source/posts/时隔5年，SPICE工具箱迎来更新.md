@@ -2,6 +2,7 @@
 title: 时隔 5 年，SPICE 工具箱迎来更新
 date: 2022-03-29 16:00:00
 cover: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover21.png
+code: false
 ---
 
 其实这并不算是一个新闻，因为早在今年 1 月 3 日，[naif 官网](https://naif.jpl.nasa.gov/pub/naif/)就已经悄咪咪地发布了版本号 N0067 的全新版本，距上一次版本更新已经过去了 5 年。

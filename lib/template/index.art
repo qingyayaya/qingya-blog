@@ -157,7 +157,7 @@
         </div>
         <div id="navbar-right">
             {{each pages}}
-            <a href="./{{ $value.title }}" target="_blank">{{ $value.text }}</a>
+            <a href="/{{ $value.title }}" target="_blank">{{ $value.text }}</a>
             {{/each}}
         </div>
     </nav>
@@ -166,7 +166,7 @@
         <li class="achieve-item">
             <div class="info">
                 <div class="date">{{ $value.date }}</div>
-                <a href="./post/{{ $value.title }}/" target="_blank">{{ $value.title }}</a>
+                <a href="/post/{{ $value.title }}/" target="_blank">{{ $value.title }}</a>
             </div>
             {{if config.cover}}
             <div class="cover">

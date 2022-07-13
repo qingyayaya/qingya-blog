@@ -2,6 +2,7 @@
 title: Mathematica 数学动图欣赏（一）
 date: 2021-08-01 16:40:00
 cover: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover3.png
+code: false
 ---
 
 - **Mathematica 数学动图欣赏**是一个不定时更新的系列，这是第一期

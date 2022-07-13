@@ -2,6 +2,7 @@
 title: MaTeX 与 LaTeX
 date: 2021-08-02 22:08:00
 cover: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover4.png
+code: true
 ---
 
 

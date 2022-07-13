@@ -2,6 +2,7 @@
 title: Lissajous 轨道如何施加脉冲来规避日食？
 date: 2022-03-09 18:00:00
 cover: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover16.png
+code: false
 ---
 
 最近阅读了一篇介绍 Lissajous 轨道借助不变流形来规避日食的论文，《Eclipse Avoidance for Lissajous Orbits Using Invariant Manifolds》，虽然是 2004 年发表的，但是思路巧妙、方法可行、结果完整。原文涉及到繁琐的数学推导，不过推导过程被作者写的很省略，往往用一句 after some cumbersome algebra 带过，所以读起来是很吃力的。那么这篇笔记就是详细地还原一下那些 cumbersome algebra，供以后参考。

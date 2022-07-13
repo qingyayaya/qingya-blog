@@ -2,6 +2,7 @@
 title: MathJax 服务端渲染 LaTeX
 date: 2022-03-10 19:00:00
 cover: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover17.png
+code: true
 ---
 
 开始之前，先分清 SSR 和 CSR 的区别：

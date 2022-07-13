@@ -2,6 +2,7 @@
 title: 【游戏安利】The Witness 之解谜篇
 date: 2022-01-23 19:00:00
 cover: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover15.png
+code: false
 ---
 
 > 1 月 2 号，第 10 轮核酸检测的路上，首次在现实世界里看到环境谜题，一时间，游戏和现实的边界都虚化了。我兴奋地伸出手指去比划，却失落地发现自己是有肉身的……

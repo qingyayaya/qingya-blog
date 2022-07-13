@@ -2,6 +2,7 @@
 title: 重新编译 mice
 date: 2021-11-01 20:00:00
 cover: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover13.png
+code: true
 ---
 
 在我的不懈努力之下，公众号终于从**周更**变成了**月更**，说不定将来还会变成**季更**。

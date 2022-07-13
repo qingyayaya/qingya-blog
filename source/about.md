@@ -2,6 +2,7 @@
 title: about
 text: 关于
 index: 2
+code: false
 ---
 
 **个人信息：**

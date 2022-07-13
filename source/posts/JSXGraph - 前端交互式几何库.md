@@ -2,6 +2,7 @@
 title: JSXGraph - 前端交互式几何库
 date: 2021-10-17 18:00:00
 cover: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover11.png
+code: true
 ---
 
 <link rel="stylesheet" type="text/css" href="https://gcore.jsdelivr.net/npm/jsxgraph@1.3.2/distrib/jsxgraph.css"/>

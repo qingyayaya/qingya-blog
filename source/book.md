@@ -2,6 +2,7 @@
 title: book
 text: 看书
 index: 1
+code: false
 ---
 
 <style type="text/css">
@@ -138,7 +139,7 @@ index: 1
 <p class="title">看过的书</p>
 <div class="book-content">加载中，请稍等...</div>
 <div class="book-loadmore">加载更多</div>
-<br /><hr><br />
+<br/><hr><br/>
 
 <script type="text/javascript">
 (function() {

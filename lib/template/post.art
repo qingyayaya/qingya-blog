@@ -24,12 +24,12 @@
         <div class="licensing">
             <div class="licensing-title">
                 <p><strong>{{ title }}</strong></p>
-                <p><a href="./post/{{ title }}/">{{ config.url }}/post/{{ title }}/</a></p>
+                <p><a href="/post/{{ title }}/">{{ config.url }}/post/{{ title }}/</a></p>
             </div>
             <div class="licensing-meta">
                 <div>
                     <p class="licensing-item-title">作者</p>
-                    <p><a href="{{ config.url }}">{{ config.name }}</a></p>
+                    <p><a href="{{ config.url }}">{{ config.author }}</a></p>
                 </div>
                 <div>
                     <p class="licensing-item-title">发布于</p>

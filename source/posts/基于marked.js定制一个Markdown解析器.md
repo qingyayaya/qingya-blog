@@ -2,6 +2,7 @@
 title: 基于 marked.js 定制一个 Markdown 解析器
 date: 2022-03-28 17:00:00
 cover: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover20.png
+code: true
 ---
 
 [marked.js](https://marked.js.org/) 是一款轻量级的快速 Markdown 解析器，可以运行在浏览器或服务器（ Node.js 环境）上，著名的 [Hexo](https://hexo.io/) 和 [docsify](https://docsify.js.org/) 等工具都依赖它，截至 2022 年 1 月 20 日，在 [Github](https://github.com/markedjs/marked) 的 Star 数是 26700+

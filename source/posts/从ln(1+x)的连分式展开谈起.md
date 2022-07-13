@@ -2,6 +2,7 @@
 title: 从 ln(1+x) 的连分式展开谈起
 date: 2021-07-15 17:51:00
 cover: https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/cover/cover1.png
+code: false
 ---
 
 第一次听说《An Introduction to the Mathematics and Methods of Astrodynamics》这本航天动力学最经典的教材，是在本科 Orbit Mechanics 这门课上。后来费了很大力气找到了电子版，一看 800 多页，旋即放弃。假期从图书馆找到了中文译本，打算好好啃一啃这本书。
