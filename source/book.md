@@ -1,17 +1,12 @@
 ---
 title: book
-text: 看书
+text: Book
 index: 1
 code: false
 ---
 
 <style type="text/css">
 /* book */
-.title {
-    text-align: center;
-    font-size: 2.0rem;
-    margin-bottom: 10px;
-}
 .book-content {
     display: flex;
     align-items: stretch;
@@ -143,9 +138,9 @@ code: false
 
 <script type="text/javascript">
 (function() {
-    const bookStep = 12; // 每次加载多少本书
-    var book = []; // 数组
-    var bookHead = 0;  // 当前Head指向谁
+    const step = 12; // 每次加载多少本书
+    var book = [];
+    var head = 0;
 
     // 获取json
     var xhr = new XMLHttpRequest();
@@ -153,14 +148,9 @@ code: false
     xhr.send(null);
     xhr.onload = () => {
         if (xhr.status == 200) {
-            // 给book赋值
             book = JSON.parse(xhr.responseText);
-
-            // 清空内容
-            document.querySelector('.book-content').innerHTML = '';
-            
-            // 加载一次
-            parseBookData();
+            document.querySelector('.book-content').innerHTML = ''; // 清空内容
+            parseBookData(); // 加载一次
         }
     };
 
@@ -169,31 +159,26 @@ code: false
 
     // 加载一次
     function parseBookData() {
-        if (bookHead < book.length) {
-            book.slice(bookHead, bookHead+bookStep).forEach(e => {
-                createBookItem(e);
-            });
-            bookHead += bookStep;
+        if (head < book.length) {
+            document.querySelector('.book-content').innerHTML += book.slice(head, head+step).map(e => {
+                 return `
+<div class="book-item">
+    <a class="book" target="_blank" href="https://book.douban.com/subject/${e.doubanUrl}/">
+        <div style="position: relative;">
+            <div class="book-hover">
+                <p>${e.name}<br /><br />${e.author}</p>
+            </div>
+        </div>
+        <img class="book-image" src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/book/${e.photoUrl}">
+    </a>
+</div>`;
+            }).join('');
+            head += step;
         }
-        if (bookHead >= book.length) {
+        if (head >= book.length) {
             document.querySelector('.book-loadmore').innerHTML = '没有了';
             document.querySelector('.book-loadmore').onclick = null;
         }
-    }
-
-    // 生成一本书
-    function createBookItem(e) {
-        document.querySelector('.book-content').innerHTML += `
-            <div class="book-item">
-                <a class="book" target="_blank" href="https://book.douban.com/subject/${e.doubanUrl}/">
-                    <div style="position: relative;">
-                        <div class="book-hover">
-                            <p>${e.name}<br /><br />${e.author}</p>
-                        </div>
-                    </div>
-                    <img class="book-image" src="https://gcore.jsdelivr.net/gh/qingyayaya/cdn/pics/book/${e.photoUrl}">
-                </a>
-            </div>`;
     }
 })();
 </script>
@@ -211,15 +196,13 @@ code: false
     xhr.send(null);
     xhr.onload = () => {
         if (xhr.status == 200) {
-            var html = '';
-            JSON.parse(xhr.responseText).forEach(e => {
-                html += `
-                    <li class="record-item">
-                        <div class="record-content">${e.content}</div>
-                        <p class="record-info">${e.author}《${e.reference}》</p>
-                    </li>`;
-            });
-            document.querySelector('.record').innerHTML += html;
+            document.querySelector('.record').innerHTML = JSON.parse(xhr.responseText).map(e => {
+                return `
+<li class="record-item">
+    <div class="record-content">${e.content}</div>
+    <p class="record-info">${e.author}《${e.reference}》</p>
+</li>`;
+            }).join('');
         }
     }
 })();

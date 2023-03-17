@@ -32,4 +32,4 @@ deploy:
   user_name: qingya
 
 # 是否对生成的html, js, css进行压缩
-minimize: true
+minimize: false

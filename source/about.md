@@ -1,13 +1,13 @@
 ---
 title: about
-text: 关于
-index: 2
+text: About
+index: 3
 code: false
 ---
 
 **个人信息：**
 
-- 目前读博二
+- 目前读博三
 - 航空宇航科学与技术
 - 数字世界里的造物者
 - Trajectory Designer
