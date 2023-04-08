@@ -272,7 +272,7 @@ div.tip code {
 }
 
 .licensing .licensing-title a {
-    font-size: 0.5rem;
+    font-size: small;
 }
 
 .licensing .licensing-meta {
@@ -283,7 +283,6 @@ div.tip code {
 }
 
 .licensing .licensing-item-title {
-    font-size: 0.5rem;
     font-weight: bold;
 }
 
