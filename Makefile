@@ -1,4 +1,4 @@
 init:
 	npm install
 	npm link
-	qingya -init
+	qingya --init
