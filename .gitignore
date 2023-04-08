@@ -1,5 +1,4 @@
-*.log
 node_modules/
 public/
-resource/
-.deploy*/
+*.log
+package-lock.json

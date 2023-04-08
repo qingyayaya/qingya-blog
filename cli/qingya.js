@@ -4,7 +4,7 @@ process.title = 'qingya';
 
 const program = require('commander');
 const appInfo = require('../package.json');
-const Qingya = require('../lib/index');
+const Qingya = require('../src/index');
 
 var qingya = new Qingya();
 

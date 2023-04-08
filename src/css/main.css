@@ -31,7 +31,7 @@ p {
 }
 
 strong {
-    color: var(--strong-color); /* 加粗用纯黑色并不好 */
+    color: var(--strong-color); /* It's not good to use pure black for bold */
     font-weight: 700;
 }
 
@@ -43,7 +43,7 @@ hr {
     margin-bottom: 1.5rem;
 }
 
-/* 超链接 */
+/* hyperlink */
 a {
     color: var(--blue-color);
     text-decoration: none;
@@ -61,12 +61,12 @@ a>code {
     text-decoration: underline;
 }
 
-/* 图片 */
+/* image */
 img {
     max-width: 100%;
 }
 
-/* 代码块 */
+/* block code */
 pre {
     overflow: auto;
     padding: 20px;
@@ -103,7 +103,7 @@ code {
     font-size: 95%;
 }
 
-/* 行内代码 */
+/* inline code */
 code {
     border-radius: 2px;
     color: var(--code-color);
@@ -112,7 +112,7 @@ code {
     white-space: pre-wrap;
 }
 
-/* 所有标题 */
+/* title */
 h1,
 h2,
 h3,
@@ -125,7 +125,6 @@ h6 {
     overflow-y: hidden;
 }
 
-/* 标题 */
 h1 {
     font-size: 1.75rem;
     line-height: 1.125;
@@ -148,7 +147,7 @@ textarea {
     font-family: 'Source Code Pro', monospace, 'Microsoft YaHei';
 }
 
-/* 表格相关 */
+/* table */
 table {
     border-collapse: collapse;
     margin: 0 auto;
@@ -181,7 +180,7 @@ th {
     overflow-x: auto;
 }
 
-/* post顶部的title和date */
+/* 'title' and 'date' at the top of the post */
 p.title {
     text-align: center;
     margin: 0 auto;
@@ -196,7 +195,7 @@ p.date {
     color: darkgray;
 }
 
-/* 引用 */
+/* quote */
 blockquote {
     border-left: 3px lightgrey solid;
     padding: 0px 10px;
@@ -206,7 +205,7 @@ blockquote {
     font-family: Palatino, Helvetica, STKaiti, SimSun, serif;
 }
 
-/* warning型引用 */
+/* warning quote */
 div.warn {
     background: var(--gray-bg-color);
     border-radius: 2px;
@@ -215,7 +214,7 @@ div.warn {
     line-height: 1.6rem;
 }
 
-/* tip型引用 */
+/* tip quote */
 div.tip {
     background-color: var(--gray-bg-color);
     border-bottom-right-radius: 2px;
@@ -246,7 +245,7 @@ div.tip code {
     background-color: var(--gray-bg-color);
 }
 
-/* MathJax公式 */
+/* MathJax */
 .mjx-display {
     display: block;
     text-align: center;
@@ -288,7 +287,7 @@ div.tip code {
     font-weight: bold;
 }
 
-/* 滑动条 */
+/* scrollbar */
 ::-webkit-scrollbar {
     width: 6px;
     height: 6px;

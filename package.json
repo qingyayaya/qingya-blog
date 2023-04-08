@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "less is more",
   "bin": {
-    "qingya": "./bin/qingya.js"
+    "qingya": "./cli/qingya.js"
   },
   "keywords": [
     "blog"

@@ -7,7 +7,7 @@
     <link rel="icon" href="{{ config.icon }}">
     <link rel="stylesheet" href="/css/main.css">
     <style type="text/css">
-        /* 导航栏 */
+        /* navbar */
         nav {
             position: fixed;
             top: 0;
@@ -120,8 +120,8 @@
             height: 70px;
         }
 
-        /* 底部的 less is more */
-        .less-is-more {
+        /* motto at the bottom */
+        .motto {
             text-align: center;
             font-size: 80%;
             letter-spacing: 0.1rem;
@@ -130,8 +130,8 @@
             margin: 20px 0 30px 0;
         }
 
-        .less-is-more::before,
-        .less-is-more::after {
+        .motto::before,
+        .motto::after {
             content: '';
             position: absolute;
             top: 8px;
@@ -141,11 +141,11 @@
             background-color: lightgrey;
         }
 
-        .less-is-more::before {
+        .motto::before {
             margin-left: -120px;
         }
 
-        .less-is-more::after {
+        .motto::after {
             margin-left: 60px;
         }
     </style>
@@ -176,6 +176,6 @@
         </li>
         {{/each}}
     </ul>
-    <div class="less-is-more">Less is More<div>
+    <div class="motto">{{ config.motto }}<div>
 </body>
 </html>

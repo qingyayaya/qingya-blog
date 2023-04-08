@@ -28,15 +28,15 @@
             </div>
             <div class="licensing-meta">
                 <div>
-                    <p class="licensing-item-title">作者</p>
+                    <p class="licensing-item-title">Author</p>
                     <p><a href="{{ config.url }}">{{ config.author }}</a></p>
                 </div>
                 <div>
-                    <p class="licensing-item-title">发布于</p>
+                    <p class="licensing-item-title">Release</p>
                     <p>{{ date }}</p>
                 </div>
                 <div>
-                    <p class="licensing-item-title">许可协议</p>
+                    <p class="licensing-item-title">License</p>
                     <p><a href="https://creativecommons.org/">Creative Commons</a></p>
                 </div>
             </div>

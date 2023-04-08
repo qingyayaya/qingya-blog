@@ -24,6 +24,9 @@ time_format: HH:mm:ss
 # Cover
 cover: true
 
+# Motto
+motto: Less is More
+
 # Deployment
 deploy:
   repository: https://github.com/qingyayaya/qingyayaya.github.io.git
@@ -31,5 +34,5 @@ deploy:
   user_email: 898489431@qq.com
   user_name: qingya
 
-# 是否对生成的html, js, css进行压缩
+# Whether to compress HTML, JS, CSS
 minimize: false
