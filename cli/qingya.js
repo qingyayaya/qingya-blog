@@ -35,7 +35,7 @@ if (program.init) {
 }
 
 if (program.load) {
-  qingya.loadConfig();
+  qingya.updateConfig();
 }
 
 if (program.clear) {
@@ -47,7 +47,7 @@ if (program.generate) {
 }
 
 if (program.deploy) {
-  qingya.deploygit(program.deploy || 'update');
+  qingya.deploygit(program.args[0] || 'update');
 }
 
 if (program.push) {
