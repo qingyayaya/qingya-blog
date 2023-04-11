@@ -8,8 +8,10 @@
   "keywords": [
     "blog"
   ],
-  "author": "qingyatongxue",
-  "license": "MIT",
+  "author": {
+    "name": "Ruilong Li",
+    "url": "https://qingyayaya.github.io"
+  },
   "dependencies": {
     "art-template": "^4.13.2",
     "commander": "2.17.1",
