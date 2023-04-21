@@ -1,32 +1,39 @@
-const fs = require('fs');
-const path = require('path');
-const crypto = require('crypto');
-const { execSync } = require('child_process');
-const moment = require('moment');
-const yaml = require('js-yaml');
-const fm = require('front-matter');
-const marked = require('./markdown/marked');
-const template = require('art-template');
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import { execSync } from 'node:child_process';
+import moment from 'moment';
+import yaml from 'js-yaml';
+import fm from 'front-matter';
+import template from 'art-template';
+import { marked } from './marked-load.js'
 
-module.exports = class Qingya {
+// dirname
+import { fileURLToPath } from 'node:url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-    constructor() {
-        this.rootDir = path.join(__dirname, '..');
+export class Qingya {
+
+    constructor(blogDir = '.') {
+        this.blogDir = blogDir;
         this.updateConfig();
     }
 
     path(...dir) {
-        return path.join(this.rootDir, ...dir);
+        return path.join(__dirname, '..', ...dir);
     }
 
-    publicDir(...dir)
-    {
-        return path.join(this.rootDir, this.config.public_dir, ...dir);
+    rootDir(...dir) {
+        return path.join(this.blogDir, ...dir);
     }
 
-    sourceDir(...dir)
-    {
-        return path.join(this.rootDir, this.config.source_dir, ...dir);
+    publicDir(...dir) {
+        return path.join(this.blogDir, this.config.public_dir, ...dir);
+    }
+
+    sourceDir(...dir) {
+        return path.join(this.blogDir, this.config.source_dir, ...dir);
     }
 
     checkDir(dir) {
@@ -36,7 +43,7 @@ module.exports = class Qingya {
     }
 
     updateConfig() {
-        this.config = yaml.safeLoad(fs.readFileSync(this.path('_config.yml'), 'utf8'));
+        this.config = yaml.load(fs.readFileSync(this.rootDir('_config.yml'), 'utf8'));
         this.parseMD5();
         template.defaults.minimize = this.config.minimize; // Configure whether to compress HTML, JS, CSS. https://aui.github.io/art-template/docs/minimize.html#Configuration
     }
@@ -50,7 +57,7 @@ module.exports = class Qingya {
     }
 
     parseMD5() {
-        var file = this.path('md5.log');
+        var file = this.rootDir('md5.log');
         if (fs.existsSync(file)) {
             this.MD5History = JSON.parse(fs.readFileSync(file, 'utf-8') || '{}');
         } else {
@@ -59,7 +66,7 @@ module.exports = class Qingya {
     }
 
     clearMD5() {
-        var file = this.path('md5.log');
+        var file = this.rootDir('md5.log');
         if (fs.existsSync(file)) {
             fs.unlinkSync(file);
         }
@@ -114,157 +121,129 @@ module.exports = class Qingya {
         });
     }
 
-    async generate() {
+    generate() {
         this.updateConfig();
         this.copyCSS();
 
         // traverse and compile posts
-        var posts = [];
-        var postFilenames = fs.readdirSync(this.sourceDir('posts'));
-        for (let filename of postFilenames) {
-            posts.push(await this.compilePost(filename));
-        }
+        var posts = fs.readdirSync(this.sourceDir('posts')).map(filename => this.compilePost(filename));
 
         // traverse and compile pages
-        var pages = [];
-        var pageFilenames = fs.readdirSync(this.sourceDir()).slice(0, -1);
-        for (let filename of pageFilenames) {
-            pages.push(await this.compilePage(filename));
-        }
+        var pages = fs.readdirSync(this.sourceDir('pages')).map(filename => this.compilePage(filename));
 
         // compile index.html
         this.compileIndex(posts, pages);
     }
 
-    async compilePosts(...filenames) {
-        this.updateConfig();
-        for (let filename of filenames) {
-            await this.compilePost(filename);
-        }
-    }
-
-    async compilePages(...filenames) {
-        this.updateConfig();
-        for (let filename of filenames) {
-            await this.compilePage(filename);
-        }
-    }
-
-    compilePost(filename) {
-
-        return new Promise((resolve, reject) => {
-            
-            fs.readFile(this.sourceDir('posts', filename), 'utf8', (err, data) => {
-
-                if (err) throw err;
-
-                // parse the yaml of the header
-                var option = fm(data);
-
-                // date of post
-                var date = moment(option.attributes.date).utc().format(this.getDateFormat());
-
-                // check whether the file has been changed by MD5
-                var md5 = this.getMD5(data);
-                var output = {
-                    title: option.attributes.title,
-                    cover: option.attributes.cover,
-                    ISOString: option.attributes.date,
-                    date,
-                    md5,
-                    filename
-                };
-
-                // if the file has not been changed, return
-                if (this.MD5History[filename] == md5) {
-                    resolve(output);
-                    console.log(`[√] ${option.attributes.title} not changed.`);
-                    return
-                }
-
-                // parse and generate content
-                var content = marked.parse(option.body);
-
-                // generate html according to the template
-                var html = template(this.path('src/template/post.art'), {
-                    type: 'post',
-                    title: option.attributes.title,
-                    date,
-                    hasCode: option.attributes.code ?? true,
-                    content,
-                    config: this.config
-                });
-
-                // write to file
-                var theDir = this.publicDir('post', option.attributes.title);
-                this.checkDir(theDir);
-                fs.writeFile(theDir + '/index.html', html, (err) => {
-                    if (err) throw err;
-                    console.log(`[√] ${option.attributes.title}`);
-                });
-
-                resolve(output);
-
-            });
-
+    compilePost(postDir) {
+        // base url
+        marked.use({
+            baseUrl: `${this.config.cdn}/posts/${postDir}/assets/`
         });
 
-    }
+        // find and read markdown file
+        const filename = fs.readdirSync(this.sourceDir('posts', postDir)).find(e => path.extname(e) == '.md');
+        const markdown = fs.readFileSync(this.sourceDir('posts', postDir, filename), 'utf8');
 
-    compilePage(filename) {
+        // parse the yaml of the header
+        const { attributes, body } = fm(markdown);
 
-        return new Promise((resolve, reject) => {
+        // date of post
+        const date = moment(attributes.date).utc().format(this.getDateFormat());
 
-            fs.readFile(this.sourceDir(filename), 'utf8', (err, data) => {
+        // check whether the file has been changed by MD5
+        const md5 = this.getMD5(markdown);
+        const output = {
+            title: attributes.title,
+            cover: attributes.cover,
+            ISOString: attributes.date,
+            date,
+            md5,
+            filename
+        };
 
-                if (err) throw err;
+        // if the file has not been changed, return
+        if (this.MD5History[filename] == md5) {
+            console.log(`[√] ${attributes.title} not changed.`);
+            return output;
+        }
 
-                // parse the yaml of the header
-                var option = fm(data);
+        // parse and generate content
+        const content = marked.parse(body);
 
-                // check whether the file has been changed by MD5
-                var md5 = this.getMD5(data);
-                var output = {
-                    title: option.attributes.title,
-                    text: option.attributes.text,   // The text displayed on the homepage navbar
-                    index: option.attributes.index,
-                    md5,
-                    filename
-                };
-
-                // if the file has not been changed, return
-                if (this.MD5History[filename] == md5) {
-                    resolve(output);
-                    console.log(`[√] ${option.attributes.title} not changed.`);
-                    return
-                }
-
-                // parse and generate content
-                var content = marked.parse(option.body);
-
-                // generate html according to the template
-                var html = template(this.path('src/template/post.art'), {
-                    type: 'page',
-                    title: option.attributes.text,
-                    hasCode: option.attributes.code ?? true,
-                    content,
-                    config: this.config
-                });
-
-                // write to file
-                var theDir = this.publicDir(option.attributes.title);
-                this.checkDir(theDir);
-                fs.writeFile(theDir + '/index.html', html, (err) => {
-                    if (err) throw err;
-                    console.log(`[√] ${option.attributes.title}`);
-                });
-
-                resolve(output);
-
-            });
-
+        // generate html according to the template
+        const html = template(this.path('src/template/post.art'), {
+            type: 'post',
+            title: attributes.title,
+            date,
+            hasCode: attributes.code ?? true,
+            content,
+            config: this.config
         });
 
+        console.log(`[√] ${attributes.title}`);
+
+        // write to file
+        const theDir = this.publicDir('post', attributes.title);
+        this.checkDir(theDir);
+        fs.writeFile(theDir + '/index.html', html, (err) => {
+            if (err) throw err;
+        });
+
+        return output;
+    }
+
+    compilePage(pageDir) {
+        // base url
+        marked.use({
+            baseUrl: `${this.config.cdn}/pages/${pageDir}/assets/`
+        });
+
+        // find and read markdown file
+        const filename = fs.readdirSync(this.sourceDir('pages', pageDir)).find(e => path.extname(e) == '.md');
+        const data = fs.readFileSync(this.sourceDir('pages', pageDir, filename), 'utf8');
+
+        // parse the yaml of the header
+        const { attributes, body } = fm(data);
+
+        // check whether the file has been changed by MD5
+        const md5 = this.getMD5(data);
+        const output = {
+            title: attributes.title,
+            text: attributes.text,   // The text displayed on the homepage navbar
+            index: attributes.index,
+            md5,
+            filename
+        };
+
+        // if the file has not been changed, return
+        if (this.MD5History[filename] == md5) {
+            console.log(`[√] ${attributes.title} not changed.`);
+            return output;
+        }
+
+        // parse and generate content
+        const content = marked.parse(body);
+
+        // generate html according to the template
+        const html = template(this.path('src/template/post.art'), {
+            type: 'page',
+            title: attributes.text,
+            hasCode: attributes.code ?? true,
+            content,
+            config: this.config
+        });
+
+        console.log(`[√] ${attributes.title}`);
+
+        // write to file
+        const theDir = this.publicDir(attributes.title);
+        this.checkDir(theDir);
+        fs.writeFile(theDir + '/index.html', html, (err) => {
+            if (err) throw err;
+        });
+
+        return output;
     }
 
     compileIndex(posts, pages) {
@@ -297,7 +276,7 @@ module.exports = class Qingya {
         pages.forEach(e => {
             md5[e.filename] = e.md5;
         });
-        fs.writeFile(this.path('md5.log'), JSON.stringify(md5), (err) => {
+        fs.writeFile(this.rootDir('md5.log'), JSON.stringify(md5), (err) => {
             if (err) throw err;
         });
     }

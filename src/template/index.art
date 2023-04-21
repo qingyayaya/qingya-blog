@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <title>{{ config.name }}</title>
-    <link rel="icon" href="{{ config.icon }}">
+    <link rel="icon" href="{{ config.cdn }}/{{ config.icon }}">
     <link rel="stylesheet" href="/css/main.css">
     <style type="text/css">
         /* navbar */
@@ -153,7 +153,7 @@
 <body>
     <nav>
         <div id="navbar-left">
-            <a href="/" target="_blank"><img id="navbar-logo" src="{{ config.logo }}" alt="{{ config.name }}"></a>
+            <a href="/" target="_blank"><img id="navbar-logo" src="{{ config.cdn }}/{{ config.logo }}" alt="{{ config.name }}"></a>
         </div>
         <div id="navbar-right">
             {{each pages}}
@@ -170,7 +170,7 @@
             </div>
             {{if config.cover}}
             <div class="cover">
-                <img src="{{ $value.cover }}"/>
+                <img src="{{ config.cdn }}/{{ $value.cover }}"/>
             </div>
             {{/if}}
         </li>

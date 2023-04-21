@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <title>{{ title }}</title>
-    <link rel="icon" href="{{ config.icon }}">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" href="{{ config.cdn }}/{{ config.icon }}">
     {{if hasCode}}
     <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/highlight.js@11.3.1/styles/github.css">
     <link rel="stylesheet" href="https://fonts.loli.net/css2?family=Source+Code+Pro">
     {{/if}}
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <article>

@@ -1,0 +1,26 @@
+{
+  "name": "qingya",
+  "version": "0.0.1",
+  "description": "less is more",
+  "bin": {
+    "qingya": "./cli/qingya.js"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": {
+    "name": "Ruilong Li",
+    "url": "https://github.com/qingyayaya/qingya-blog.git"
+  },
+  "type": "module",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "commander": "^10.0.1",
+    "front-matter": "^4.0.2",
+    "highlight.js": "^11.7.0",
+    "js-yaml": "^4.1.0",
+    "marked": "^4.3.0",
+    "mathjax": "^3.2.2",
+    "moment": "^2.29.4"
+  }
+}
