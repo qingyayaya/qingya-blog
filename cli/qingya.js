@@ -41,7 +41,7 @@ if (options.generate) {
 }
 
 if (options.deploy) {
-  qingya.deploygit(options.args[0] || 'update');
+  qingya.deploygit(program.args[0] || 'update');
 }
 
 if (options.push) {

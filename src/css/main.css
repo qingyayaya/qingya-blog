@@ -10,7 +10,7 @@
 }
 
 body {
-    min-width: 300px;
+    min-width: 700px;
     max-width: 700px;
     margin: 0 auto;
 }
@@ -106,8 +106,9 @@ code {
     font-size: 95%;
 }
 
-.hljs {
+pre code.hljs {
     background: none;
+    padding: 0;
 }
 
 /* inline code */
