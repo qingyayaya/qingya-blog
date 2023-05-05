@@ -17,6 +17,15 @@ export class Qingya {
 
     constructor(blogDir = '.') {
         this.blogDir = blogDir;
+        
+        var file = this.rootDir('_config.yml');
+        if (!fs.existsSync(file)) {
+            fs.copyFile(this.path('src/_config.yml'), file, (err) => {
+		        if (err) throw err;
+		        console.log(`[√] copy _config.yml`);
+		    });
+        }
+        
         this.updateConfig();
     }
 
@@ -76,6 +85,8 @@ export class Qingya {
         this.checkDir(this.publicDir());
         this.checkDir(this.publicDir('css'));
         this.checkDir(this.publicDir('post'));
+        this.checkDir(this.rootDir('posts'));
+        this.checkDir(this.rootDir('pages'));
 
         var opt = this.config.deploy;
         execSync([
