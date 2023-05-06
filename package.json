@@ -1,6 +1,6 @@
 {
   "name": "qingya",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "less is more",
   "bin": {
     "qingya": "./cli/qingya.js"

@@ -20,7 +20,7 @@ export class Qingya {
         
         var file = this.rootDir('_config.yml');
         if (!fs.existsSync(file)) {
-            fs.copyFile(this.path('src/_config.yml'), file, (err) => {
+            fs.copyFile(this.path('assets/_config.yml'), file, (err) => {
 		        if (err) throw err;
 		        console.log(`[√] copy _config.yml`);
 		    });
@@ -119,7 +119,7 @@ export class Qingya {
 
     copyCSS() {
         var destDir = this.publicDir('css');
-        var srcDir = this.path('src/css');
+        var srcDir = this.path('assets/css');
 
         fs.readdir(srcDir, 'utf8', (err, filename) => {
             if (err) throw err;
