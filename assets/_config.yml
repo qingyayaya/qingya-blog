@@ -16,7 +16,7 @@ url: https://qingyayaya.github.io
 
 # Directory
 source_dir: .
-public_dir: public
+public_dir: .public
 skip_render: 404/index.html # skip render 404
 
 # Date / Time format

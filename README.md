@@ -50,4 +50,4 @@ Compile blog:
 qingya -g
 ```
 
-The output web resources are in `public/` folder.
+The output web resources are in `.public/` folder.

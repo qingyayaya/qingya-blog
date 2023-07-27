@@ -66,7 +66,7 @@ export class Qingya {
     }
 
     parseMD5() {
-        var file = this.rootDir('md5.log');
+        var file = this.rootDir('.md5');
         if (fs.existsSync(file)) {
             this.MD5History = JSON.parse(fs.readFileSync(file, 'utf-8') || '{}');
         } else {
@@ -75,7 +75,7 @@ export class Qingya {
     }
 
     clearMD5() {
-        var file = this.rootDir('md5.log');
+        var file = this.rootDir('.md5');
         if (fs.existsSync(file)) {
             fs.unlinkSync(file);
         }
@@ -287,7 +287,7 @@ export class Qingya {
         pages.forEach(e => {
             md5[e.filename] = e.md5;
         });
-        fs.writeFile(this.rootDir('md5.log'), JSON.stringify(md5), (err) => {
+        fs.writeFile(this.rootDir('.md5'), JSON.stringify(md5), (err) => {
             if (err) throw err;
         });
     }
