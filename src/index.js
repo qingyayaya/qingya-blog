@@ -229,7 +229,7 @@ export class Qingya {
 
         // if the file has not been changed, return
         if (this.MD5History[filename] == md5) {
-            console.log(`[√] ${attributes.title} not changed.`);
+            console.log(`[√] ${attributes.title} (not changed).`);
             return output;
         }
 
