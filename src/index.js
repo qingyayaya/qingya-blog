@@ -168,7 +168,7 @@ code: false
     compilePost(postDir) {
         // base url
         marked.use({
-            baseUrl: `${this.config.cdn}/posts/${postDir}/assets/`
+            baseUrl: `${this.config.cdn}/posts/${postDir}/`
         });
 
         // find and read markdown file
