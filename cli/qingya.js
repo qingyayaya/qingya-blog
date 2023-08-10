@@ -12,6 +12,7 @@ const appInfo = require('../package.json');
 program
   .version(appInfo.version, '-v, --version')
   .description('cli for qingya-blog.')
+  .option('-n, --new', 'new post')
   .option('-g, --generate', 'generate')
   .option('-l, --load', 'load config')
   .option('-c, --clear', 'clear MD5 history')
@@ -34,6 +35,10 @@ if (options.load) {
 
 if (options.clear) {
   qingya.clearMD5();
+}
+
+if (options.new) {
+  qingya.newPost();
 }
 
 if (options.generate) {

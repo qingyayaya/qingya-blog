@@ -132,6 +132,25 @@ export class Qingya {
         });
     }
 
+    newPost() {
+        this.updateConfig();
+
+        const date = (new Date).toISOString();
+        const theDir = this.sourceDir(`posts/${date}`);
+        this.checkDir(theDir);
+        fs.writeFile(`${theDir}/${date}.md`,
+`---
+title: ${date}
+date: ${date}
+cover: static/pics/cover/${date}.png
+code: false
+---
+
+`, (err) => {
+            if (err) throw err;
+        });
+    }
+
     generate() {
         this.updateConfig();
         this.copyCSS();
