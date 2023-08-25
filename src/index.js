@@ -94,7 +94,7 @@ export class Qingya {
             'git init',
             `git remote add origin "${opt.repository}"`,
         ].join('&&'));
-        console.log('[√] git is initialized.');
+        console.log('[√] git is initialized');
     }
 
     deploygit(massage) {
@@ -107,7 +107,7 @@ export class Qingya {
             `git commit --allow-empty -m "${massage}"`,
             `git push -u origin ${opt.branch}`
         ].join('&&'));
-        console.log('[√] Deploying to git is finished.');
+        console.log('[√] Deploying to git is finished');
     }
 
     pushgit() {
@@ -194,7 +194,7 @@ code: false
 
         // if the file has not been changed, return
         if (this.MD5History[filename] == md5) {
-            console.log(`[√] ${attributes.title} not changed.`);
+            console.log(`[√] ${attributes.title} (not changed)`);
             return output;
         }
 
@@ -248,7 +248,7 @@ code: false
 
         // if the file has not been changed, return
         if (this.MD5History[filename] == md5) {
-            console.log(`[√] ${attributes.title} (not changed).`);
+            console.log(`[√] ${attributes.title} (not changed)`);
             return output;
         }
 

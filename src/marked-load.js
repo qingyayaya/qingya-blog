@@ -20,20 +20,18 @@ MathJax = await pkg.init({
 });
 
 MathJax.getSVGfontCache = function () {
-  // 获取fontCache
+  // get fontCache
   const cache = this.startup.output.fontCache.getCache();
 
-  // 如果cache有子节点，才需要进一步获取
+  // only if cache has child nodes, further operation is required
   if (this.startup.adaptor.firstChild(cache)) {
-    // 清空fontCache
+    // clear fontCache
     this.startup.output.fontCache.clearCache();
-    // cache变量是<defs>节点，需要转为文本形式，并用<svg>标签包裹，然后返回
-    return '<svg style="display: none" id="MJX-SVG-global-cache">'
-      + this.startup.adaptor.outerHTML(cache)
-      + '</svg>';
+    // cache is <defs>, which needs to be converted to text, wrapped with <svg> tags, and then returned
+    return `<svg style="display: none" id="MJX-SVG-global-cache">${this.startup.adaptor.outerHTML(cache)}</svg>`;
   }
 
-  // 默认返回空字符
+  // return null string by default
   return '';
 }
 
@@ -123,17 +121,10 @@ const renderer = {
     code = code.replace(/\n$/, '') + '\n';
 
     if (!lang) {
-      return '<pre><code>'
-        + (escaped ? code : escape(code, true))
-        + '</code></pre>\n';
+      return `<pre><code>${escaped ? code : escape(code, true)}</code></pre>\n`;
     }
 
-    return '<pre data-lang="' + escape(lang, true) + '"><code class="'
-      + this.options.langPrefix
-      + escape(lang)
-      + '">'
-      + (escaped ? code : escape(code, true))
-      + '</code></pre>\n';
+    return `<pre data-lang="${escape(lang, true)}"><code class="${this.options.langPrefix}${escape(lang)}">${escaped ? code : escape(code, true)}</code></pre>\n`;
   }
 };
 
