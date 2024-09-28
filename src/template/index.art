@@ -34,8 +34,7 @@
 
         #navbar-left a {
             display: flex;
-            align-items: center;
-            padding: 0.46rem;
+            padding: 0.38rem;
         }
 
         #navbar-logo {
