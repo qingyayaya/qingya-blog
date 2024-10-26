@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { execSync } from 'node:child_process';
+import { globSync } from 'glob';
 import moment from 'moment';
 import yaml from 'js-yaml';
 import fm from 'front-matter';
@@ -159,13 +160,22 @@ code: false
         this.copyCSS();
 
         // traverse and compile posts
-        var posts = fs.readdirSync(this.sourceDir('posts')).map(filename => this.compilePost(filename));
+        const posts = fs.readdirSync(this.sourceDir('posts'), {withFileTypes: true})
+            .filter(dirent => dirent.isDirectory())
+            .map(dirent => this.compilePost(dirent.name));
 
         // traverse and compile pages
-        var pages = fs.readdirSync(this.sourceDir('pages')).map(filename => this.compilePage(filename));
+        const pages = fs.readdirSync(this.sourceDir('pages'), {withFileTypes: true})
+            .filter(dirent => dirent.isDirectory())
+            .map(dirent => this.compilePage(dirent.name));
 
         // compile index.html
         this.compileIndex(posts, pages);
+    }
+
+    coverName(postDir) {
+        const cover = globSync(this.sourceDir(`posts/${postDir}/assets/cover.{png,jpg}`));
+        return cover ? cover[0].replace(this.sourceDir('/'), '') : '';
     }
 
     compilePost(postDir) {
@@ -188,7 +198,7 @@ code: false
         const md5 = this.getMD5(markdown);
         const output = {
             title: attributes.title,
-            cover: attributes.cover,
+            cover: this.coverName(postDir),
             ISOString: attributes.date,
             date,
             md5,

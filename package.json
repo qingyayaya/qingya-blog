@@ -1,6 +1,6 @@
 {
   "name": "qingya",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "less is more",
   "bin": {
     "qingya": "./cli/qingya.js"
@@ -17,6 +17,7 @@
     "art-template": "^4.13.2",
     "commander": "^10.0.1",
     "front-matter": "^4.0.2",
+    "glob": "^11.0.0",
     "highlight.js": "^11.7.0",
     "js-yaml": "^4.1.0",
     "marked": "^4.3.0",
