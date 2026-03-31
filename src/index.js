@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -52,7 +54,7 @@ export class Qingya {
     }
     
     checkConfigYMAL() {
-    	var file = this.rootDir('_config.yml');
+    	const file = this.rootDir('_config.yml');
         if (!fs.existsSync(file)) {
             fs.copyFile(this.path('src/_config.yml'), file, (err) => {
 		        if (err) throw err;
@@ -76,7 +78,7 @@ export class Qingya {
     }
 
     parseMD5() {
-        var file = this.rootDir('.md5');
+        const file = this.rootDir('.md5');
         if (fs.existsSync(file)) {
             this.MD5History = JSON.parse(fs.readFileSync(file, 'utf-8') || '{}');
         } else {
@@ -85,14 +87,14 @@ export class Qingya {
     }
 
     clearMD5() {
-        var file = this.rootDir('.md5');
+        const file = this.rootDir('.md5');
         if (fs.existsSync(file)) {
             fs.unlinkSync(file);
         }
     }
 
     initgit() {
-        var opt = this.config.deploy;
+        const opt = this.config.deploy;
         execSync([
             `cd ${this.publicDir()}`,
             'git init',
@@ -102,7 +104,7 @@ export class Qingya {
     }
 
     deploygit(massage) {
-        var opt = this.config.deploy;
+        const opt = this.config.deploy;
         execSync([
             `cd ${this.publicDir()}`,
             `git config user.email "${opt.user_email}"`,
@@ -122,8 +124,8 @@ export class Qingya {
     }
 
     copyCSS() {
-        var destDir = this.publicDir('css');
-        var srcDir = this.path('src/css');
+        const destDir = this.publicDir('css');
+        const srcDir = this.path('src/css');
 
         fs.readdir(srcDir, 'utf8', (err, filename) => {
             if (err) throw err;
@@ -146,7 +148,6 @@ export class Qingya {
 `---
 title: ${date}
 date: ${date}
-cover: static/pics/cover/${date}.png
 code: false
 ---
 
@@ -299,7 +300,7 @@ code: false
         });
 
         // generate html according to the template
-        var html = template(this.path('src/template/index.art'), {
+        const html = template(this.path('src/template/index.art'), {
             posts,
             pages,
             config: this.config

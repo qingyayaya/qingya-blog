@@ -1,9 +1,7 @@
-all:
+all: init
 
 init:
 	npm install
 	npm link
-	cp 'assets/Empty Blog.md' ~/Templates
 
-.PHONY:
-	all init
+.PHONY: all init
